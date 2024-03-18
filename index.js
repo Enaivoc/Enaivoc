@@ -86,4 +86,4 @@ function videoPlay(){
   Video.play()
   document.getElementById("videoplay-btn").style.display="none"
   document.getElementById("video-pause").style.removeProperty("display")
-}￼Enter
+}Enter

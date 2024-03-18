@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
-  <script src="index.js"></script>
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/index.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Architects+Daughter&family=Gluten:wght@100..900&family=Itim&family=Kablammo&family=Madimi+One&family=Rancho&family=Sixtyfour&family=Tilt+Prism&display=swap&family=Climate+Crisis" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Architects+Daughter&family=Gluten:wght@100..900&family=Itim&family=Kablammo&family=Madimi+One&family=Rancho&family=Sixtyfour&family=Tilt+Prism&display=swap&family=Climate+Crisis&family=Nova+Cut" rel="stylesheet">
 <script src="https://kit.fontawesome.com/19589ebed2.js" crossorigin="anonymous"></script>
   <title>Enaivoc</title>
 </head>
-<body>
+<body id="body">
+  <div id="home">
 <div id="fixed-header">
   <header>
     <h1 id="app-name">enaivoc</h1>
@@ -23,7 +24,16 @@
   <div onclick="selectInspiration()" id="inspiration-video"><video poster="ins.jpg" autoplay="true" id="daily-video"><source src="inspiration1.mp4" type="video/mp4"></video><i onclick="playInsVid()" class="fa-solid fa-play" id="insplay-btn"></i></div>
   
   
-  <div onclick="selectIntro()" id="enaivoc-intro"><video poster="images (26).jpeg" autoplay="true" id="intro-video"><source src="inspiration1.mp4" type="video/mp4"></video><i onclick="playIntroVid()" class="fa-solid fa-play" id="introplay-btn"></i></div>
+  <div onclick="selectIntro()" id="enaivoc-intro"><video poster="ins3.jpg" autoplay="true" id="intro-video"><source src="inspiration1.mp4" type="video/mp4"></video><i onclick="playIntroVid()" class="fa-solid fa-play" id="introplay-btn"></i></div>
 </div>
+<h2 id="slogan">begin your journey to change the world</h2>
+<button id="begin">begin</button>
+</div>
+ <div onclick="selectInspiration()" id="video"><video poster="ins.jpg" autoplay="true" id="video-play"><source src="inspiration1.mp4" type="video/mp4"></video>
+ <i onclick="videoPlay()" class="fa-solid fa-play" id="videoplay-btn"></i>
+ <i onclick="pause()" class="fa-solid fa-pause" id="video-pause"></i>
+ <i onclick="replay()" id="replay-btn"class="fa-solid fa-arrow-rotate-left"></i></div>
+   <i onclick="Home()" id="home-btn" class="fa-solid fa-house"></i>
+
 </body>
-</html>
+                                                              </html

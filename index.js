@@ -1,4 +1,4 @@
-funcfunction playInsVid(){
+function playInsVid(){
   document.getElementById("introplay-btn").style.visibility="visible"
   document.getElementById("introplay-btn").style.removeProperty("display")
   document.getElementById("insplay-btn").style.display="none"

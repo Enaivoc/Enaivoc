@@ -52,7 +52,7 @@ body{
   position: fixed;
   transform: translate(-50%,-50%)rotate(90deg);
   left: 235px;
-  top: 93%;
+bottom: 1%;
   z-index: 1;
 }
 option{
@@ -124,12 +124,12 @@ option{
 }
 .black-key{
   background: black;
-  width: 100px;
+  width: 80px;
   height: 10vh;
   margin: 2px;
   margin-right: .5px;
   position: absolute;
-  left: 67px;
+  left: 64px;
   border-radius:  15% 5% 5% 15% ;
   border:2px outset #424242;
   border-right:2px solid #4e6160;
@@ -225,7 +225,7 @@ option{
   height: 170px;
   transform: rotate(90deg);
   top: 240px;
-  left: 119px;
+  left: 109px;
   mix-blend-mode: screen;
   display: flex;
   position: fixed;

@@ -6,7 +6,7 @@
 #lesson-menu{
   position: absolute;
   top: 90px;
-  left: 50px;
+  left: 25%;
   font-size: 13px;
   font-weight: 200;
   font-family: "Gluten", cursive;
@@ -127,7 +127,7 @@ header{
 #insplay-btn{
   position: absolute;
   top: 163px;
-  right: 165px;
+  right: 46%;
   font-size: 30px;
   color: #ddff10;
   transition: linear .2s;
@@ -164,12 +164,12 @@ header{
     height: auto; 
     background-size: cover;
     border-radius: 7px;
-}
 
+}
 #introplay-btn{
   position: absolute;
   top: 328px;
-  right: 165px;
+  right: 46%;
   font-size: 30px;
   color: #ddff10;
   visibility: hidden;

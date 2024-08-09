@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user
+    -scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Piano Tutor</title>
+    <link
+      rel="stylesheet"
+      href="Piano.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Annie+Use+You
+    +Telescope&family=Architects+Daughter&family=Gluten:wght@100..900&family
+    =Itim&family=Kablammo&family=Madimi+One&family=Rancho&family
+    =Sixtyfour&family=Tilt+Prism&display=swap&family=Climate+Crisis&family=Nova
+    +Cut" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet"><script src="https://kit.fontawesome.com/19589ebed2.js" crossorigin="anonymous"></script></head>
+<body>
+  <div id="stop-landscape">please turn off auto rotate on your device to continue
+  <br>
+  <img src="Rotate.jpg">
+  </div>
+  <!-- purpose of this div is to stop landsacpe mode-->
+  <div id="page">
+    <!--Single octave piano keys-->
+    <div id="illustration">
+      <img class="illustration-image" src
+    ="illustration.png"> <img class
+    ="cloud" src="images (6).jpeg"><span 
+    id="text">hello</span>
+    </div>
+ <div id="hPosition"> <i onclick="window.location.href='index.html?runFunction=true'" id="home-btn" class="fa-solid fa-house"></i></div>
+   <div id="pPosition"> <i
+    class="fa-solid fa-play"
+    id="startTutor"
+    ></i></div>
+    <button
+    class="col-8 btn btn-secondary mt-1"
+    aria-pressed="true"
+    data-toggle="button"
+    id="fullscreen-button"
+    aria-label="Press to toggle 
+    fullscreen view">
+      Fullscreen
+      </button>
+      <!-- <button
+      id="help-button">
+<i
+class="fa fa-info"
+aria-hidden="true"
+aria-label="Press for information"
+></i>
+</button> -->
+</div>
+</div>
+<div class="col-3 col-md-2 justify
+-content-center">
+<select
+class="col btn btn-light btn-sm"
+id="speed-select"
+aria-label="Select speed"
+>
+<option value="800" selected>Slow</option>
+<option value="500">Normal</option>
+<option value="300">Fast</option>
+</select>
+<select
+class="col btn btn-light btn-sm mt-2"
+id="bar-select"
+aria-label="select song length"
+>
+<option value="1">1 bar</option>
+<option value="2">2 bars</option>
+<option value="3">3 bars</option>
+<option value="4">4 bars</option>
+<option value="5">5 bars</option>
+<option value="6">6 bars</option>
+<option value="7">7 bars</option>
+<option value="8">8 bars</option>
+<option value="16" selected>Full Song</option>
+</select>
+</div>
+</div>
+</section>
+      <section class="container-fluid landscape pt-2">
+        <div id="wrapper">
+        <div class="keyboard" id="piano">
+          <div
+            class="white-key"
+            id="c-key"
+            data-note="C"
+            data-sound="middle-C-sound"
+            aria-label="C key"
+          ><div id="do-solfa-text">do</div></div>
+          <div
+            class="black-key"
+            id="csharp-key"
+            data-note="C#"
+            data-sound="Csharp-sound"
+            aria-label="C sharp key"
+          ></div>
+          <div
+            class="white-key"
+            id="d-key"
+            data-note="D"
+            data-sound="D-sound"
+            aria-label="D key"
+          ><div id="re-solfa-text">re</div></div>
+          <div
+            class="black-key"
+            id="dsharp-key"
+            data-note="D#"
+            data-sound="Dsharp-sound"
+            aria-label="D sharp key"
+          ></div>
+          <div
+            class="white-key"
+            id="e-key"
+            data-note="E"
+            data-sound="E-sound"
+            aria-label="E key"
+          ><div id="me-solfa-text">me</div></div>
+          <div
+            class="white-key"
+            id="f-key"
+            data-note="F"
+            data-sound="F-sound"
+            aria-label="F key"
+          ><div id="fa-solfa-text">fa</div></div>
+          <div
+            class="black-key"
+            id="fsharp-key"
+            data-note="F#"
+            data-sound="Fsharp-sound"
+            aria-label="F sharp key"
+          ></div>
+          <div
+            class="white-key"
+            id="g-key"
+            data-note="G"
+            data-sound="G-sound"
+            aria-label="G key"
+          ><div id="so-solfa-text">so</div></div>
+          <div
+            class="black-key"
+            id="gsharp-key"
+            data-note="G#"
+            data-sound="Gsharp-sound"
+            aria-label="G sharp key"
+          ></div>
+          <div
+            class="white-key"
+            id="a-key"
+            data-note="A"
+            data-sound="A-sound"
+            aria-label="A key"
+          ><div id="la-solfa-text">la</div></div>
+          <div
+            class="black-key"
+            id="asharp-key"
+            data-note="A#"
+            data-sound="Asharp-sound"
+            aria-label="A sharp key"
+          ></div>
+          <div
+            class="white-key"
+            id="b-key"
+            data-note="B"
+            data-sound="B-sound"
+            aria-label="B key"
+          ><div id="ti-solfa-text">ti</div></div>
+          <div
+            class="white-key"
+            id="chigh-key"
+            data-note="C (high)"
+            data-sound="highC-sound"
+            aria-label="High C key"
+          ><div id="do-solfa-text">do</div></div>
+           <div
+            class="black-key"
+            id="csharphigh-key"
+            data-note="C# (high)"
+            data-sound="highCsharp-sound"
+            aria-label="High C sharp key"
+          ></div>
+            <div
+            class="white-key"
+            id="dhigh-key"
+            data-note="D (high)"
+            data-sound="highD-sound"
+            aria-label="High D key"
+          ><div id="re-solfa-text">re</div></div>
+          <div
+            class="black-key"
+            id="dsharphigh-key"
+            data-note="D# (high)"
+            data-sound="highDsharp-sound"
+            aria-label="High D sharp key"
+          ></div>
+          <div
+            class="white-key"
+            id="ehigh-key"
+            data-note="E (high)"
+            data-sound="highE-sound"
+            aria-label="High E key"
+          ><div id="me-solfa-text">me</div></div>
+          <div
+            class="white-key"
+            id="fhigh-key"
+            data-note="F (high)"
+            data-sound="highF-sound"
+            aria-label="High F key"
+          ><div id="fa-solfa-text">fa</div></div>
+          </div>
+        </div>
+      </section>
+
+      <!--audio files play when triggered by keypress-->
+      <section>
+        <audio 
+          src="middleCcomp.mp3"
+          preload="auto"
+          id="middle-C-sound"
+        ></audio>
+        <audio
+          src="Csharpcomp.mp3"
+          preload="auto"
+          id="Csharp-sound"
+        ></audio>
+        <audio src="Dcomp.mp3" preload="auto" id="D-sound"></audio>
+        <audio
+          src="Dsharpcomp.mp3"
+          preload="auto"
+          id="Dsharp-sound"
+        ></audio>
+        <audio src="Ecomp.mp3" preload="auto" id="E-sound"></audio>
+        <audio src="assets/audio/Fcomp.mp3" preload="auto" id="F-sound"></audio>
+        <audio
+          src="Fsharpcomp.mp3"
+          preload="auto"
+          id="Fsharp-sound"
+        ></audio>
+        <audio src="Gcomp.mp3" preload="auto" id="G-sound"></audio>
+        <audio
+          src="Gsharpcomp.mp3"
+          preload="auto"
+          id="Gsharp-sound"
+        ></audio>
+        <audio src="Acomp.mp3" preload="auto" id="A-sound"></audio>
+        <audio
+          src="Asharpcomp.mp3"
+          preload="auto"
+          id="Asharp-sound"
+        ></audio>
+        <audio
+          src="Bcomp.mp3"
+          preload="auto"
+          id="B-sound"
+        ></audio>
+        <audio
+          src="highCcomp.mp3"
+          preload="auto"
+          id="highC-sound"
+        ></audio>
+        <audio
+          src="highCsharpcomp.mp3"
+          preload="auto"
+          id="highCsharp-sound"
+        ></audio>
+        <audio
+          src="highDcomp.mp3"
+          preload="auto"
+          id="highD-sound"
+        ></audio>
+        <audio
+          src="highDsharpcomp.mp3"
+          preload="auto"
+          id="highDsharp-sound"
+        ></audio>
+        <audio
+          src="highEcomp.mp3"
+          preload="auto"
+          id="highE-sound"
+        ></audio>
+        <audio
+          src="highFcomp.mp3"
+          preload="auto"
+          id="highF-sound"
+        ></audio>
+      </section>
+    </section>
+    </div>
+    <!--links to js files-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/esm/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-fullscreen-plugin/1.1.4/jquery.fullscreen-min.js"></script>
+    <script src="piano.js"></script>
+    <script src="songs.js"></script>
+     <script src="load.js"></script>
+ </body>
+</html>

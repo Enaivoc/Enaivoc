@@ -50,7 +50,7 @@ function selectIntro(){
   document.getElementById("enaivoc-intro").style.width="90%"
   document.getElementById("inspiration-video").style.width="55%"
   document.getElementById("inspiration-video").style.opacity = "0.3";
-  document.getElementById("insplay-btn").style.top="123px"
+  document.getElementById("insplay-btn").style.top="26%"
   document.getElementById("introplay-btn").style.top="305px"
   let inspirationVideo=document.getElementById("daily-video")
   inspirationVideo.pause()
@@ -63,11 +63,11 @@ function selectInspiration(){
   document.getElementById("enaivoc-intro").style.width="55%"
   document.getElementById("inspiration-video").style.width="90%"
   document.getElementById("inspiration-video").style.opacity = "1.0";
-  document.getElementById("insplay-btn").style.top="163px"
+  document.getElementById("insplay-btn").style.top="26%"
   /**document.getElementById("introplay-btn").style.visibility="hidden"**/
   let introVid=document.getElementById("intro-video")
   introVid.pause()
-  document.getElementById("introplay-btn").style.top="340px"
+  document.getElementById("introplay-btn").style.top="50%"
   document.getElementById("introplay-btn").style.visibility="hidden"
   
 }

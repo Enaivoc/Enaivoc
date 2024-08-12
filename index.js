@@ -114,7 +114,7 @@ function videoPlay(){
 function Endedvideo(){
   document.getElementById("video-pause").style.display="none"
   document.getElementById('videoplay-btn').style.removeProperty("display")
-  let Video=document.getElementById("video-play")
+  let Video=document.getElementById0("video-play")
   Video.currentTime= 0;
 }
 $("#start-piano").click(() => {

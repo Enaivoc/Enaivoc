@@ -97,6 +97,7 @@ header{
   margin-bottom: 17%;
 }
 #inspiration-video{
+  position: relative;
   background: rgba(127,127,127,0.275);
   width: 90%;
   margin-left: auto;
@@ -126,7 +127,7 @@ header{
 }
 #insplay-btn{
   position: fixed;
-  top: 26%;
+  top: 50%;
   right: 46%;
   font-size: 30px;
   color: #ddff10;
@@ -136,7 +137,8 @@ header{
   
 
 }
-#enaivoc-intro{
+#enaivoc-intro{ 
+  position: relative;
   opacity: 0.6;
   margin-top: 10%;
   background: rgba(127,127,127,0.275);

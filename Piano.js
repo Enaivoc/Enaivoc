@@ -48,7 +48,7 @@ const stopAudio = audio => {
 const keyDown = key => {
   let playAudio = key.target.getAttribute("data-sound"); // assigns the data-sound attribute of the pressed key to playAudio
   let targetPlayAudio = document.getElementById(playAudio); // matches the data-sound info the ID of the audio track
-  stopAudio(targetPlayAudio); // resets audio track if pressed before audio finished
+  stopAudio(targetPlayAudio); // resets audio trackn if pressed before audio finished
   targetPlayAudio.play(); // plays audio on keypress
   key.target.setAttribute(
     "style",
@@ -65,13 +65,35 @@ const keyUp = key => {
 
 /* Assigns the keyDown and keyUp variables to pointer events and tutorDemo and makes them available to all piano keys. keyPress uses pointer instead of mouse to allow multi-finger input on touchscreen laptops */
 const keyPress = note => {
-  note.onpointerdown = () => {
+  note.onmousedown= () => {
     keyDown(event);
+    event.preventDefault();
+    event.stopPropagation();
+    const key = event.targetTouches[0].target.closest('.white-key');
+    if (key) {
+      
+    }
+  {passive: true}
   };
-  note.onpointerup = () => {
+  note.onmouseup= () => {
     keyUp(event);
   };
-  note.onpointerleave = () => {
+  note.ontouchstart= () => {
+    keyDown(event);
+    event.preventDefault();
+    event.stopPropagation();
+    const key = event.targetTouches[0].target.closest('.white-key');
+    if (key) {
+      
+    }
+  {passive: true}
+  const keyB = event.targetTouches[0].target.closest('.black-key');
+    if (keyB) {
+      
+    }
+  {passive: true}
+  };
+  note.ontouchend = () => {
     keyUp(event);
   };
 };

@@ -18,6 +18,7 @@ body{
   overflow-y: scroll;
 }
 .white-key{
+ touch-action: none;
  width: 167.5px;
  height: 12vh;
  background: white;
@@ -29,8 +30,9 @@ body{
 }
 .keyboard{
   opacity: 1;
-  background: linear-gradient( to right,rgb(0,169,170),rgb(0,230,233));
+  background: linear-gradient( to right,rgb(0,169,170),rgb(89,111,112));
   color: white;
+  padding-right: 0;
   display: block;
   width: 50%;
   
@@ -111,20 +113,25 @@ option{
   top: 93%;
   right: 10px;
 }
+#wrapper{
+  position: relative;
+}
 #piano{
+  position: relative;
   min-height: 100px;
   padding-top: 0px;
   border-radius: 2%;
   width: 50%;
-  border: 1px outset rgb(0,230,233);
-  top: 125px;
-  border-right: 0px;
+  border: 1px outset rgb(89,111,112);
+  margin-right: 0;
+
   overflow: scroll;
   border-left: 1px inset rgb(0,230,233);
 }
 .black-key{
+  touch-action: none;
   background: black;
-  width: 80px;
+  width: 55.5%;
   height: 10vh;
   margin: 2px;
   margin-right: .5px;
@@ -132,32 +139,32 @@ option{
   left: 64px;
   border-radius:  15% 5% 5% 15% ;
   border:2px outset #424242;
-  border-right:2px solid #4e6160;
-  border-left: 7px solid #687b7f;
+  border-right:2px solid black;
+  border-left: 7px solid #556265;
   border-bottom: .5px outset #677a7e;
 }
 #csharp-key{
-  top: 40px;
+  top: 5%;
   
 }
 #dsharp-key{
-  top: 125px;
+  top: 15%;
 }
 #fsharp-key{
-  top: 272px;
+  top: 31%;
 }
 #gsharp-key{
-  top: 355px;
+  top: 41%;
 }
 #asharp-key{
-  top: 440px;
+  top: 51%;
 }
 #csharphigh-key{
-  top: 590px;
+  top: 68%;
   
 }
 #dsharphigh-key{
-  top: 680px;
+  top: 78.5%;
   
 }
 #piano{

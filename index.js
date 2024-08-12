@@ -51,7 +51,7 @@ function selectIntro(){
   document.getElementById("inspiration-video").style.width="55%"
   document.getElementById("inspiration-video").style.opacity = "0.3";
   document.getElementById("insplay-btn").style.top="26%"
-  document.getElementById("introplay-btn").style.top="305px"
+  document.getElementById("introplay-btn").style.top="30%"
   let inspirationVideo=document.getElementById("daily-video")
   inspirationVideo.pause()
   
@@ -67,7 +67,7 @@ function selectInspiration(){
   /**document.getElementById("introplay-btn").style.visibility="hidden"**/
   let introVid=document.getElementById("intro-video")
   introVid.pause()
-  document.getElementById("introplay-btn").style.top="50%"
+  document.getElementById("introplay-btn").style.top="30%"
   document.getElementById("introplay-btn").style.visibility="hidden"
   
 }

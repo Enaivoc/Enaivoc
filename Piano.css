@@ -53,8 +53,8 @@ body{
   border-radius: 1px;
   position: fixed;
   transform: translate(-50%,-50%)rotate(90deg);
-  left: 235px;
-bottom: 1%;
+  right: 70px;
+bottom: 2%;
   z-index: 1;
 }
 option{

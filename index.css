@@ -127,7 +127,7 @@ header{
 }
 #insplay-btn{
   position: fixed;
-  top: 50%;
+  top: 30%;
   right: 46%;
   font-size: 30px;
   color: #ddff10;
@@ -170,7 +170,7 @@ header{
 }
 #introplay-btn{
   position: absolute;
-  top: 50%;
+  top: 30%;
   right: 46%;
   font-size: 30px;
   color: #ddff10;

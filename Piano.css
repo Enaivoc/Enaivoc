@@ -16,6 +16,7 @@ body{
   background: black;
   overflow: auto;
   overflow-y: scroll;
+  color:white;
 }
 .white-key{
  touch-action: none;
@@ -94,6 +95,7 @@ option{
   position: fixed;
   transform: translate(-50%,-50%)rotate(90deg);
   bottom: 2%;
+  visibility: hidden;
   right: -35px;
 }
 #bar-select{

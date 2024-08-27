@@ -115,6 +115,7 @@ function checkBothEnded(){
        }
      }
 function tutorDemo(callback){
+  document.documentElement.click();
   const keyObject = {};
   const speed = $("select#speed-select").val();
   const barLength = $("select#bar-select").val() * 2;
@@ -122,6 +123,16 @@ function tutorDemo(callback){
   const order = JSON.parse(storageVar);
   let lastNote = order.length-1;
   let lastNoteFinished = false;
+  order.forEach((note) => {
+    const audioId = document.getElementById(note.note).getAttribute("data-sound");
+    const audio = document.getElementById(audioId);
+    audio.load();
+    audio.play().then(() => {
+      audio.pause();
+      audio.currentTime=0;
+    });
+  });
+  setTimeout(() => {
   for (let i = 0; i < order.length; i++) {
     const barLengthCorrected = barLength + i - order[i].time;
     const correctTiming = Math.round(order[i].time * speed*10)/10;
@@ -132,6 +143,9 @@ function tutorDemo(callback){
       setTimeout(() => {
        const keyId = document.getElementById(order[i].note);
         keyObject.target = keyId;
+        const playAudio = keyId.getAttribute("data-sound");
+        keyDown(keyObject);
+        document.getElementById(playAudio).play();
 
           setTimeout(() => {
             keyUp(keyObject);
@@ -145,6 +159,10 @@ function tutorDemo(callback){
       }, correctTiming);
     })(i);
   }
+  },100);
+  callback();
+
+
   function checkDemoEnd(){
     if(lastNoteFinished&&demoEnded){
       const video = document.getElementById("intro-video");
@@ -165,7 +183,7 @@ function playIll(){
 
 function syncVideoWithDemo(barLength){
   const video = document.getElementById("intro-video");
-  const demoDuration = barLength*1;
+  const demoDuration = barLength*2;
   video.addEventListener("timeupdate",function(){
     if (demoEnded&&video.currentTime >= demoDuration){
       video.pause();
@@ -176,7 +194,7 @@ function syncVideoWithDemo(barLength){
   });
 }
 $("select#bar-select").on("change", function(){
-  const barLength = $(this).val()*2;
+  const barLength = $(this).val()*1.2;
   syncVideoWithDemo(barLength)
 });
 

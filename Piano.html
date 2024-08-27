@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user
     -scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>JavaScript Piano Tutor</title>
+    <title>enaivoc Piano Tutor</title>
     <link
       rel="stylesheet"
       href="Piano.css"
@@ -24,16 +24,14 @@
   <div id="page">
     <!--Single octave piano keys-->
     <div id="illustration">
-      <img class="illustration-image" src
-    ="illustration.png"> <img class
-    ="cloud" src="images (6).jpeg"><span 
-    id="text">hello</span>
-    </div>
+<video class="illustration-vid" poster="ins.jpg"  id="intro-video"><source src="" type="video/mp4"></video>
+     </div>
  <div id="hPosition"> <i onclick="window.location.href='index.html?runFunction=true'" id="home-btn" class="fa-solid fa-house"></i></div>
-   <div id="pPosition"> <i
+   <div id="pPosition"><i
     class="fa-solid fa-play"
     id="startTutor"
     ></i></div>
+    <button id="start-quiz">Quiz</button>
     <button
     class="col-8 btn btn-secondary mt-1"
     aria-pressed="true"
@@ -60,7 +58,7 @@ class="col btn btn-light btn-sm"
 id="speed-select"
 aria-label="Select speed"
 >
-<option value="900" selected>Slow</option>
+<option value="1100" selected>Slow</option>
 <option value="500">Normal</option>
 <option value="300">Fast</option>
 </select>
@@ -69,14 +67,14 @@ class="col btn btn-light btn-sm mt-2"
 id="bar-select"
 aria-label="select song length"
 >
-<option value="1">1 bar</option>
-<option value="2">2 bars</option>
-<option value="3">3 bars</option>
-<option value="4">4 bars</option>
-<option value="5">5 bars</option>
-<option value="6">6 bars</option>
-<option value="7">7 bars</option>
-<option value="8">8 bars</option>
+<option value="1">1 step</option>
+<option value="2">2 steps</option>
+<option value="3">3 steps</option>
+<option value="4">4 steps</option>
+<option value="5">5 steps</option>
+<option value="6">6 steps</option>
+<option value="7">7 steps</option>
+<option value="8">8 steps</option>
 <option value="16" selected>Full Song</option>
 </select>
 </div>
@@ -91,7 +89,7 @@ aria-label="select song length"
             data-note="C"
             data-sound="middle-C-sound"
             aria-label="C key"
-          ><div id="do-solfa-text">do</div></div>
+          ><div id="do-solfa-text">¶</div></div>
           <div
             class="black-key"
             id="csharp-key"
@@ -105,7 +103,7 @@ aria-label="select song length"
             data-note="D"
             data-sound="D-sound"
             aria-label="D key"
-          ><div id="re-solfa-text">re</div></div>
+          ><div id="re-solfa-text">¶</div></div>
           <div
             class="black-key"
             id="dsharp-key"
@@ -119,14 +117,14 @@ aria-label="select song length"
             data-note="E"
             data-sound="E-sound"
             aria-label="E key"
-          ><div id="me-solfa-text">me</div></div>
+          ><div id="me-solfa-text">¶</div></div>
           <div
             class="white-key"
             id="f-key"
             data-note="F"
             data-sound="F-sound"
             aria-label="F key"
-          ><div id="fa-solfa-text">fa</div></div>
+          ><div id="fa-solfa-text">¶</div></div>
           <div
             class="black-key"
             id="fsharp-key"
@@ -140,7 +138,7 @@ aria-label="select song length"
             data-note="G"
             data-sound="G-sound"
             aria-label="G key"
-          ><div id="so-solfa-text">so</div></div>
+          ><div id="so-solfa-text">¶</div></div>
           <div
             class="black-key"
             id="gsharp-key"
@@ -154,7 +152,7 @@ aria-label="select song length"
             data-note="A"
             data-sound="A-sound"
             aria-label="A key"
-          ><div id="la-solfa-text">la</div></div>
+          ><div id="la-solfa-text">¶</div></div>
           <div
             class="black-key"
             id="asharp-key"
@@ -168,14 +166,14 @@ aria-label="select song length"
             data-note="B"
             data-sound="B-sound"
             aria-label="B key"
-          ><div id="ti-solfa-text">ti</div></div>
+          ><div id="ti-solfa-text">¶</div></div>
           <div
             class="white-key"
             id="chigh-key"
             data-note="C (high)"
             data-sound="highC-sound"
             aria-label="High C key"
-          ><div id="do-solfa-text">do</div></div>
+          ><div id="do-solfa-text">¶</div></div>
            <div
             class="black-key"
             id="csharphigh-key"
@@ -189,7 +187,7 @@ aria-label="select song length"
             data-note="D (high)"
             data-sound="highD-sound"
             aria-label="High D key"
-          ><div id="re-solfa-text">re</div></div>
+          ><div id="re-solfa-text">¶</div></div>
           <div
             class="black-key"
             id="dsharphigh-key"
@@ -203,14 +201,14 @@ aria-label="select song length"
             data-note="E (high)"
             data-sound="highE-sound"
             aria-label="High E key"
-          ><div id="me-solfa-text">me</div></div>
+          ><div id="me-solfa-text">¶</div></div>
           <div
             class="white-key"
             id="fhigh-key"
             data-note="F (high)"
             data-sound="highF-sound"
             aria-label="High F key"
-          ><div id="fa-solfa-text">fa</div></div>
+          ><div id="fa-solfa-text">¶</div></div>
           </div>
         </div>
       </section>

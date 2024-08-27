@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
   <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Architects+Daughter&family=Gluten:wght@100..900&family=Itim&family=Kablammo&family=Madimi+One&family=Rancho&family=Sixtyfour&family=Tilt+Prism&display=swap&family=Climate+Crisis&family=Nova+Cut" rel="stylesheet">
@@ -38,20 +41,21 @@
    <i onclick="Home()" id="home-btn" class="fa-solid fa-house"></i>
    </div>
    <div id="lesson-menu">
-     <select
-class="btn btn-light mb-2 mx-auto col-7 col-sm-10"
+     <select class="select"
 id="dropdown-menu"
 aria-label="Select menu for songs"
 >
-<option>select lesson to learn </option>
+<option id="option1">select lesson to learn </option>
 <!--<option value='[{"note":"e-key","time":0},{"note":"g-key","time":0.5},{"note":"c-key","time":1},{"note":"g-key","time":1.5}]'>he won</option>-->
-<option
-value='[{"note":"c-key","time":0},{"note":"d-key","time":1},{"note":"e-key","time":2},{"note":"c-key","time":3},{"note":"c-key","time":4},{"note":"d-key","time":5},{"note":"e-key","time":6},{"note":"c-key","time":7},{"note":"e-key","time":8},{"note":"f-key","time":9},{"note":"g-key","time":10},{"note":"e-key","time":12},{"note":"f-key","time":13},{"note":"g-key","time":14},{"note":"g-key","time":16},{"note":"a-key","time":16.5},{"note":"g-key","time":17},{"note":"f-key","time":17.5},{"note":"e-key","time":18},{"note":"c-key","time":19},{"note":"g-key","time":20},{"note":"a-key","time":20.5},{"note":"g-key","time":21},{"note":"f-key","time":21.5},{"note":"e-key","time":22},{"note":"c-key","time":23},{"note":"chigh-key","time":24},{"note":"g-key","time":25},{"note":"chigh-key","time":26},{"note":"chigh-key","time":28},{"note":"g-key","time":29},{"note":"chigh-key","time":30}]'
+<option id="option1" data-description="Ill.mp4"
+value='[{"note":"c-key","time":10},{"note":"d-key","time":11},{"note":"e-key","time":12},{"note":"c-key","time":13},{"note":"c-key","time":14},{"note":"d-key","time":15},{"note":"e-key","time":16},{"note":"c-key","time":17},{"note":"e-key","time":18},{"note":"f-key","time":19},{"note":"g-key","time":10},{"note":"e-key","time":12},{"note":"f-key","time":13},{"note":"g-key","time":14},{"note":"g-key","time":16},{"note":"a-key","time":16.5},{"note":"g-key","time":17},{"note":"f-key","time":17.5},{"note":"e-key","time":18},{"note":"c-key","time":19},{"note":"g-key","time":20},{"note":"a-key","time":20.5},{"note":"g-key","time":21},{"note":"f-key","time":21.5},{"note":"e-key","time":22},{"note":"c-key","time":23},{"note":"chigh-key","time":24},{"note":"g-key","time":25},{"note":"chigh-key","time":26},{"note":"chigh-key","time":28},{"note":"g-key","time":29},{"note":"chigh-key","time":30}]'
 >WE ARE PRAYING</option
 >
-<option
-value='[{"note":"g-key","time":0},{"note":"chigh-key","time":0.5},{"note":"b-key","time":1.0},{"note":"chigh-key","time":1.5},{"note":"a-key","time":2},{"note":"g-key","time":6},{"note":"dhigh-key","time":6.5},{"note":"chigh-key","time":7},{"note":"a-key","time":7.5},{"note":"g-key","time":8},{"note":"g-key","time":11.5},{"note":"chigh-key","time":12},{"note":"b-key","time":12.5},{"note":"chigh-key","time":13},{"note":"a-key","time":13.5},{"note":"f-key","time":14.5},{"note":"a-key","time":15.5},{"note":"g-key","time":16},{"note":"g-key","time":16.5},{"note":"g-key","time":17},{"note":"f-key","time":17.5},{"note":"f-key","time":18},{"note":"e-key","time":18.5},{"note":"ehigh-key","time":21},{"note":"ehigh-key","time":21.5},{"note":"ehigh-key","time":22},{"note":"ehigh-key","time":22.5},{"note":"dhigh-key","time":23}]'
->I Wanna Wish You </option
+<option id="option2" data-description="inspiration1.mp4"
+value='[{"note":"chigh-key","time":0},{"note":"b-key","time":1},{"note":"a-key","time":1.5},{"note":"g-key","time":2},{"note":"f-key","time":3},{"note":"e-key","time":3.5},{"note":"d-key","time":4.5},{"note":"c-key","time":5.5},{"note":"g-key","time":6.5},{"note":"a-key","time":7},{"note":"a-key","time":8},{"note":"b-key","time":
+8.5},{"note":"b-key","time":9.5},{"note":"chigh-key","time":
+10},{"note":"g-key","time":17},{"note":"f-key","time":17.5},{"note":"f-key","time":18},{"note":"e-key","time":18.5},{"note":"ehigh-key","time":21},{"note":"ehigh-key","time":21.5},{"note":"ehigh-key","time":22},{"note":"ehigh-key","time":22.5},{"note":"dhigh-key","time":23}]'
+>Joy To The World </option
 >
 <option
 value='[{"note":"c-key","time":0},{"note":"c-key","time":1},{"note":"g-key","time":2},{"note":"g-key","time":3},{"note":"a-key","time":4},{"note":"a-key","time":5},{"note":"g-key","time":6},{"note":"f-key","time":8},{"note":"f-key","time":9},{"note":"e-key","time":10},{"note":"e-key","time":11},{"note":"d-key","time":12},{"note":"d-key","time":13},{"note":"c-key","time":14},{"note":"g-key","time":16},{"note":"g-key","time":17},{"note":"f-key","time":18},{"note":"f-key","time":19},{"note":"e-key","time":20},{"note":"e-key","time":21},{"note":"d-key","time":22},{"note":"g-key","time":24},{"note":"g-key","time":25},{"note":"f-key","time":26},{"note":"f-key","time":27},{"note":"e-key","time":28},{"note":"e-key","time":29},{"note":"d-key","time":30},{"note":"c-key","time":32},{"note":"c-key","time":33},{"note":"g-key","time":34},{"note":"g-key","time":35},{"note":"a-key","time":36},{"note":"a-key","time":37},{"note":"g-key","time":38},{"note":"f-key","time":40},{"note":"f-key","time":41},{"note":"e-key","time":42},{"note":"e-key","time":43},{"note":"d-key","time":44},{"note":"d-key","time":45},{"note":"c-key","time":46}]'

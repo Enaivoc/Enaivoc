@@ -3,28 +3,37 @@
   left: -9999px;
   top: -9999px;
 }
+#opt{
+  color:red;
+}
 #lesson-menu{
-  position: absolute;
+  position:absolute;
   top: 90px;
   left: 0%;
+  justify-content: center;
+  margin-right: 0;
+  margin-left: 0;
   font-size: 13px;
   font-weight: 200;
   font-family: "Gluten", cursive;
   visibility: hidden;
+  width: 100%;
 }
 #home-page{
-
 }
 #dropdown-menu{
+  position: relative;
   background: rgba(127,127,127,0.275);
   border-radius: 4px;
-  width: 230px;
+  width: 70%;
   height: 25vh;
   margin-right: 0;
   margin-left: 0;
    font-size: 16px;
-  font-family: "Gluten", cursive;
+  font-family: "Gluten", cursive !important;
+
 }
+
 *{
   box-sizing: border-box;
   padding: 0;
@@ -41,19 +50,23 @@ body{
 #info-text{
   font-family: "Gluten", cursive;
   margin-top: 3%;
+  margin-right: 0;
+  margin-left: 0;
 }
 #start-piano{
   background:linear-gradient(to right, rgb(245,255,13),rgb(0,230,233)) ;
   border: none;
   border: .0001px groove rgb(0,230,233);
   border-radius: 5px;
-  width: 40%;
+  width: 35%;
   height: auto;
   color: rgba(255,255,255,0.525);
   font-weight: 700;
   min-height: 40px;
   font-family: 'gluten',cursive;
   margin-top: 3%;
+  margin-right: 0;
+  margin-left: 0;
 }
 #fixed-header{
   z-index: 1;
@@ -126,9 +139,10 @@ header{
     border-radius: 7px;
 }
 #insplay-btn{
-  position: fixed;
-  top: 30%;
-  right: 46%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   font-size: 30px;
   color: #ddff10;
   transition: linear .2s;
@@ -170,8 +184,9 @@ header{
 }
 #introplay-btn{
   position: absolute;
-  top: 30%;
-  right: 46%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   font-size: 30px;
   color: #ddff10;
   visibility: hidden;

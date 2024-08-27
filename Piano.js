@@ -48,7 +48,7 @@ const stopAudio = audio => {
 const keyDown = key => {
   let playAudio = key.target.getAttribute("data-sound"); // assigns the data-sound attribute of the pressed key to playAudio
   let targetPlayAudio = document.getElementById(playAudio); // matches the data-sound info the ID of the audio track
-  stopAudio(targetPlayAudio); // resets audio trackn if pressed before audio finished
+  stopAudio(targetPlayAudio); // resets audio track if pressed before audio finished
   targetPlayAudio.play(); // plays audio on keypress
   key.target.setAttribute(
     "style",
@@ -65,35 +65,13 @@ const keyUp = key => {
 
 /* Assigns the keyDown and keyUp variables to pointer events and tutorDemo and makes them available to all piano keys. keyPress uses pointer instead of mouse to allow multi-finger input on touchscreen laptops */
 const keyPress = note => {
-  note.onmousedown= () => {
+  note.onpointerdown = () => {
     keyDown(event);
-    event.preventDefault();
-    event.stopPropagation();
-    const key = event.targetTouches[0].target.closest('.white-key');
-    if (key) {
-      
-    }
-  {passive: true}
   };
-  note.onmouseup= () => {
+  note.onpointerup = () => {
     keyUp(event);
   };
-  note.ontouchstart= () => {
-    keyDown(event);
-    event.preventDefault();
-    event.stopPropagation();
-    const key = event.targetTouches[0].target.closest('.white-key');
-    if (key) {
-      
-    }
-  {passive: true}
-  const keyB = event.targetTouches[0].target.closest('.black-key');
-    if (keyB) {
-      
-    }
-  {passive: true}
-  };
-  note.ontouchend = () => {
+  note.onpointerleave = () => {
     keyUp(event);
   };
 };
@@ -102,15 +80,104 @@ const keyPress = note => {
 notes.forEach(keyPress);
 
 /*Starts the tutorDemo function on press of the 'Go' button. Disables the 'Go' button for 4 seconds to prevent additional presses*/
+let startTutorButton;
+let videoEnded = false;
+let demoEnded = false;
+let videoPaused = false;
+
 $(document).ready(() => {
-  $("#startTutor").click(function() {
-    tutorDemo();
-    let start = this;
-    start.disabled = true;
-    setTimeout(() => {
-      start.disabled = false;
-    }, 4000);
+  startTutorButton=$("#startTutor");
+  startTutorButton.click(function() {
+    videoEnded = false;
+    demoEnded = false;
+    videoPaused = false;
+     startTutorButton.hide();
+    const video=document.getElementById("intro-video")
+     video.addEventListener("ended",function (){
+       videoEnded = true;
+       checkBothEnded();
+     });
+     
+     tutorDemo(function(){
+       demoEnded = true;
+       checkBothEnded();
+     });
+     playIll();
+     
+     
   });
+});
+
+function checkBothEnded(){
+  startTutorButton.hide();
+       if((videoEnded || videoPaused) && demoEnded){
+         startTutorButton.css('display','block');
+       }
+     }
+function tutorDemo(callback){
+  const keyObject = {};
+  const speed = $("select#speed-select").val();
+  const barLength = $("select#bar-select").val() * 2;
+  const storageVar = window.localStorage.getItem("selectedSong");
+  const order = JSON.parse(storageVar);
+  let lastNote = order.length-1;
+  let lastNoteFinished = false;
+  for (let i = 0; i < order.length; i++) {
+    const barLengthCorrected = barLength + i - order[i].time;
+    const correctTiming = Math.round(order[i].time * speed*10)/10;
+    if (i >= barLengthCorrected) {
+      break;
+    }
+    ((i) => {
+      setTimeout(() => {
+       const keyId = document.getElementById(order[i].note);
+        keyObject.target = keyId;
+
+          setTimeout(() => {
+            keyUp(keyObject);
+          }, speed / 2.5);
+
+        keyDown(keyObject);
+        if(i===lastNote){
+            lastNoteFinished = true;
+            checkBothEnded();
+        }
+      }, correctTiming);
+    })(i);
+  }
+  function checkDemoEnd(){
+    if(lastNoteFinished&&demoEnded){
+      const video = document.getElementById("intro-video");
+      video.pause();
+      video.currentTime=0;
+      videoPaused = true;
+      checkBothEnded();
+    }
+  }
+  callback();
+  
+}
+
+function playIll(){
+  document.getElementById("intro-video").play()
+}
+
+
+function syncVideoWithDemo(barLength){
+  const video = document.getElementById("intro-video");
+  const demoDuration = barLength*1;
+  video.addEventListener("timeupdate",function(){
+    if (demoEnded&&video.currentTime >= demoDuration){
+      video.pause();
+      video.currentTime=0;
+      videoPaused = true;
+      checkBothEnded();
+    }
+  });
+}
+$("select#bar-select").on("change", function(){
+  const barLength = $(this).val()*2;
+  syncVideoWithDemo(barLength)
 });
 
 /*
@@ -128,32 +195,7 @@ First 'setTimeout' sets the delay between notes. This is modified by the 'correc
 Second 'setTimeout' simulates time the key is held down (colour highlighting)
 */
 
-function tutorDemo() {
-  let keyObject = {};
-  let speed = $("select#speed-select").val();
-  let barLength = $("select#bar-select").val() * 4;
-  let storageVar = window.localStorage.getItem("selectedSong");
-  let order = JSON.parse(storageVar);
-  for (let i = 0; i < order.length; i++) {
-    let barLengthCorrected = barLength + i - order[i].time;
-    let correctTiming = order[i].time * speed;
-    if (i == barLengthCorrected) {
-      break;
-    }
-    (i => {
-      setTimeout(() => {
-        keyId = document.getElementById(order[i].note);
-        keyObject.target = keyId;
-        (() => {
-          setTimeout(() => {
-            keyUp(keyObject);
-          }, speed / 2.5);
-        })();
-        keyDown(keyObject);
-      }, correctTiming);
-    })(i);
-  }
-}
+
 
 /*Uses (https://github.com/kayahr/jquery-fullscreen-plugin/) to toggle fullscreen view*/
 
@@ -168,4 +210,9 @@ $("#help-button").click(() => {
 
 $("#close-modal").click(() => {
   $("#modal").hide();
+});
+$(document).ready(() => {
+  let selectedSongDescription= localStorage.getItem("selectedSongDescription");
+  let videoSource = $("#intro-video")
+  videoSource.attr("src",selectedSongDescription);
 });

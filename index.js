@@ -50,8 +50,8 @@ function selectIntro(){
   document.getElementById("enaivoc-intro").style.width="90%"
   document.getElementById("inspiration-video").style.width="55%"
   document.getElementById("inspiration-video").style.opacity = "0.3";
-  document.getElementById("insplay-btn").style.top="26%"
-  document.getElementById("introplay-btn").style.top="30%"
+/**  document.getElementById("insplay-btn").style.top="26%"
+  document.getElementById("introplay-btn").style.top="30%"**/
   let inspirationVideo=document.getElementById("daily-video")
   inspirationVideo.pause()
   
@@ -63,11 +63,11 @@ function selectInspiration(){
   document.getElementById("enaivoc-intro").style.width="55%"
   document.getElementById("inspiration-video").style.width="90%"
   document.getElementById("inspiration-video").style.opacity = "1.0";
-  document.getElementById("insplay-btn").style.top="26%"
+  /**document.getElementById("insplay-btn").style.top="26%"**/
   /**document.getElementById("introplay-btn").style.visibility="hidden"**/
   let introVid=document.getElementById("intro-video")
   introVid.pause()
-  document.getElementById("introplay-btn").style.top="30%"
+/**  document.getElementById("introplay-btn").style.top="30%"**/
   document.getElementById("introplay-btn").style.visibility="hidden"
   
 }
@@ -86,7 +86,7 @@ function lessonMenu(){
   document.getElementById("lesson-menu").style.visibility="visible"
   document.getElementById("lesson-menu").style.position="absolute"
   document.getElementById("lesson-menu").style.top="90px";
-  document.getElementById("lesson-menu").style.left="60px";
+  document.getElementById("lesson-menu").style.left="0%";
   document.getElementById("home-page").style.visibility="hidden"
   document.getElementById("insplay-btn").style.visibility="hidden"
   document.getElementById("introplay-btn").style.visibility="hidden"
@@ -118,6 +118,9 @@ function Endedvideo(){
   Video.currentTime= 0;
 }
 $("#start-piano").click(() => {
+  let selectedOption= $("select#dropdown-menu").find(":selected");
+  let dataDescription = selectedOption.attr("data-description");
+  localStorage.setItem("selectedSongDescription",dataDescription);
 let songSelect = $("select#dropdown-menu").val();
 localStorage.setItem("selectedSong", songSelect);
 window.location.href = "Piano.html";

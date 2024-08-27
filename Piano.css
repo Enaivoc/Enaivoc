@@ -68,7 +68,7 @@ option{
   margin-top: 0%;
   position: fixed;
   transform: translate(-50%,-50%)rotate(90deg);
-  right: 25px;
+  right: 10px;
   top: 80px;
   z-index: 1;
   
@@ -76,10 +76,26 @@ option{
 #startTutor{
   position: fixed;
   transform: translate(-50%,-50%)rotate(90deg);
+  right: 80px;
   top: 80px;
-  left: 225px;
   font-size: 30px;
   color: #ddff10;
+  z-index: 1;
+  
+}
+#start-quiz{
+  position: fixed;
+  transform: translate(-50%,-50%)rotate(90deg);
+  width: 70px;
+  height: 5vh;
+  font-weight: 900;
+  font-family: 'comfortaa',cursive;
+  top: 80px;
+  left: 200px;
+  font-size: 10px;
+  background:linear-gradient(to right, rgb(245,255,13),rgb(0,230,233)) ;
+  border: none;
+  color: rgba(255,14,14,0.73);
   z-index: 1;
 }
 #speed-select{
@@ -138,7 +154,7 @@ option{
   margin: 2px;
   margin-right: .5px;
   position: absolute;
-  left: 64px;
+  left: 38%;
   border-radius:  15% 5% 5% 15% ;
   border:2px outset #424242;
   border-right:2px solid black;
@@ -174,56 +190,64 @@ option{
 }
 #do-solfa-text{
   color: #1dff07;
+  font-size: 20px;
   user-select: none;
   width: 50px;
-  margin-left: 9px;
+  margin-left: -9px;
   margin-top: 27px;
 }
 #re-solfa-text{
   color: red;
+  font-size: 20px;
   user-select: none;
   width: 50px;
-  margin-left: 9px;
+  margin-left: -9px;
   margin-top: 27px;
+  transform: rotate(51.428deg);
 }
 #me-solfa-text{
-  color: blue;
-  user-select: none;
-  width: 50px;
-  margin-left: 9px;
-  margin-top: 27px;
-}
-#fa-solfa-text{
-  color: yellow;
-  user-select: none;
-  width: 50px;
-  margin-left: 9px;
-  margin-top: 27px;
-}
-#so-solfa-text{
   color: #07e2ff;
   user-select: none;
   width: 50px;
-  margin-left: 9px;
+  margin-left: -9px;
   margin-top: 27px;
+  transform: rotate(102.85deg);
+}
+#fa-solfa-text{
+  color: #dede00;
+  user-select: none;
+  width: 50px;
+  margin-left: -9px;
+  margin-top: 27px;
+  transform: rotate(154.27deg);
+}
+#so-solfa-text{
+  color: #ff0754;
+  user-select: none;
+  width: 50px;
+  margin-left: -9px;
+  margin-top: 27px;
+  transform: rotate(205.69deg);
 }
 #la-solfa-text{
   color: #ff8107;
   user-select: none;
   width: 50px;
-  margin-left: 9px;
+  margin-left: -9px;
   margin-top: 27px;
+transform: rotate(257.11deg);
 }
 #ti-solfa-text{
-  color: #ff0754;
+  color: blue;
   user-select: none;
   width: 50px;
-  margin-left: 9px;
+  margin-left: -9px;
   margin-top: 27px;
+  transform: rotate(308.53deg);
 }
 .white-key div{
   width: 10px;
-  transform: rotate(90deg);
+  
   margin: 20px;
   font-family: "Gluten", cursive;
   
@@ -231,31 +255,49 @@ option{
 #illustration{
  /** position: absolute;**/
   width: 310px;
-  height: 170px;
+  height: 162px;
   transform: rotate(90deg);
-  top: 240px;
-  left: 109px;
+  top: 243px;
+  left: 119px;
   mix-blend-mode: screen;
   display: flex;
   position: fixed;
-  overflow: auto;
+  overflow: hidden;
   opacity: 1;
-  background: #00545f;
+  background: rgba(127,127,127,0.275);
+  border-radius: 5%;
+  border-top: 1px groove rgba(127,127,127,0.275);
+  border-bottom: .5px inset grey;
+  border-left: .5px inset grey;
+  border-right: .5px inset grey;
   border-radius: 4px;
+  padding-bottom: 0.5px;
   
 
   
 }
-.illustration-image{
-  width: 300px;
+.illustration-vid{
+  width: 310px;
+  height: auto;
   position: relative;
-  left: -175px;
-  top: 10px;
+top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   margin-left: 0px;
-  height: 150px;
+
   object-fit: cover;
   background-size: cover;
-  border-radius: 5px;
+  
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+    min-width: 30%; 
+    min-height: 10%;
+    width: 100%; 
+    height: auto; 
+  
+    background-size: cover;
+    border-radius: 7px;
 }
 .cloud{
   width: 225px;
@@ -275,6 +317,18 @@ option{
   top: 65px;
   left: 128px;
   font-family: 'gluten',cursive;
+}
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: 'gluten',cursive !importantimportant;
+}
+option{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit;
 }
 @media(orientation:landscape){
   body{

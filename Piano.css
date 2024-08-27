@@ -68,7 +68,7 @@ option{
   margin-top: 0%;
   position: fixed;
   transform: translate(-50%,-50%)rotate(90deg);
-  left: 280px;
+  right: 10px;
   top: 8%;
   z-index: 1;
   
@@ -76,7 +76,7 @@ option{
 #startTutor{
   position: fixed;
   transform: translate(-50%,-50%)rotate(90deg);
-  left: 250px;
+  right: 70px;
   top: 8%;
   font-size: 30px;
   color: #ddff10;
@@ -91,7 +91,7 @@ option{
   font-weight: 900;
   font-family: 'comfortaa',cursive;
   top: 8%;
-  left: 200px;
+  right: 90px;
   font-size: 10px;
   background:linear-gradient(to right, rgb(245,255,13),rgb(0,230,233)) ;
   border: none;

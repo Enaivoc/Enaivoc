@@ -76,7 +76,7 @@ option{
 #startTutor{
   position: fixed;
   transform: translate(-50%,-50%)rotate(90deg);
-  right: 80px;
+  left: 265px;
   top: 8%;
   font-size: 30px;
   color: #ddff10;

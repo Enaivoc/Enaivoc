@@ -234,3 +234,7 @@ $(document).ready(() => {
   let videoSource = $("#intro-video")
   videoSource.attr("src",selectedSongDescription);
 });
+
+$('#start-quiz').click(function(){
+  $(this).text('Coming Soon');
+});

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Architects+Daughter&family=Gluten:wght@100..900&family=Itim&family=Kablammo&family=Madimi+One&family=Rancho&family=Sixtyfour&family=Tilt+Prism&display=swap&family=Climate+Crisis&family=Nova+Cut" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/19589ebed2.js" crossorigin="anonymous"></script>
+  <title>énåîvöç</title>
+</head>
+<body id="body">
+ <div id="page">
+  <div id="home">
+<div id="fixed-header">
+  <header>
+    <h1 id="app-name">enaivöc</h1>
+  </header>
+  
+</div>
+<div id="home-page">
+  <div class="header-shadow-space">°°°</div>
+  <div onclick="selectInspiration()" id="inspiration-video"><video poster="ins.jpg"  id="daily-video"><source src="Ill.mp4" type="video/mp4"></video><i onclick="playInsVid()" class="fa-solid fa-play" id="insplay-btn"></i></div>
+  
+  
+  <div onclick="selectIntro()" id="enaivoc-intro"><video poster="IMG-20240809-WA0007.jpg"  id="intro-video"><source src="Ill.mp4" type="video/mp4"></video><i onclick="playIntroVid()" class="fa-solid fa-play" id="introplay-btn"></i></div>
+<h2 id="slogan">begin your journey to change the world</h2>
+<button onclick="lessonMenu()" id="begin">begin</button>
+</div>
+</div>
+ <div onclick="selectInspiration()" id="video"><video onended="Endedvideo()" poster="ins.jpg"  id="video-play"><source src="Ill.mp4" type="video/mp4"></video>
+ <i onclick="videoPlay()" class="fa-solid fa-play" id="videoplay-btn"></i>
+ <i onclick="pause()" class="fa-solid fa-pause" id="video-pause"></i>
+ <i onclick="replay()" id="replay-btn"class="fa-solid fa-arrow-rotate-left"></i></div>
+   <i onclick="Home()" id="home-btn" class="fa-solid fa-house"></i>
+   </div>
+   <div id="lesson-menu">
+     <select class="select"
+id="dropdown-menu"
+aria-label="Select menu for songs"
+>
+<option id="option1">select lesson to learn </option>
+<!--<option value='[{"note":"e-key","time":0},{"note":"g-key","time":0.5},{"note":"c-key","time":1},{"note":"g-key","time":1.5}]'>he won</option>-->
+<option id="option1" data-description="Nill.mp4"
+value='[{"note":"g-key","time":1},{"note":"a-key","time":1.5},{"note":"chigh-key","time":2},{"note":"chigh-key","time":2.5},{"note":"g-key","time":3.5},{"note":"a-key","time":4},{"note":"chigh-key","time":4.5},{"note":"dhigh-key","time":5},{"note":"ehigh-key","time":6},{"note":"dhigh-key","time":6.5},{"note":"chigh-key","time":7},{"note":"a-key","time":7.5},{"note":"ehigh-key","time":8},{"note":"dhigh-key","time":8.5},{"note":"chigh-key","time":9.5},{"note":"chigh-key","time":10}]'
+>In Christ Alone ( DAVID )🎹🐯</option
+>
+>
+<option id="option3" data-description="Nill.mp4"
+value='[{"note":"g-key","time":1},{"note":"a-key","time":1.5},{"note":"chigh-key","time":2},{"note":"chigh-key","time":2.5},{"note":"g-key","time":3.5},{"note":"a-key","time":4},{"note":"chigh-key","time":4.5},{"note":"dhigh-key","time":5},{"note":"ehigh-key","time":6},{"note":"dhigh-key","time":6.5},{"note":"chigh-key","time":7},{"note":"a-key","time":7.5},{"note":"ehigh-key","time":8},{"note":"dhigh-key","time":8.5},{"note":"chigh-key","time":9.5},{"note":"chigh-key","time":10}]'
+>InChristAlone(JESHURUN)🎹🐼</option
+>
+<option id="option2" data-description="Nill.mp4"
+value='[{"note":"g-key","time":1},{"note":"a-key","time":1.5},{"note":"chigh-key","time":2},{"note":"chigh-key","time":2.5},{"note":"g-key","time":3.5},{"note":"a-key","time":4},{"note":"chigh-key","time":4.5},{"note":"dhigh-key","time":5},{"note":"ehigh-key","time":6},{"note":"dhigh-key","time":6.5},{"note":"chigh-key","time":7},{"note":"a-key","time":7.5},{"note":"ehigh-key","time":8},{"note":"dhigh-key","time":8.5},{"note":"chigh-key","time":9.5},{"note":"chigh-key","time":10}]'
+>In Christ Alone(SIMEON)🎹🐱</option
+>
+<option
+value='[{"note":"c-key","time":0},{"note":"c-key","time":1},{"note":"g-key","time":2},{"note":"g-key","time":3},{"note":"a-key","time":4},{"note":"a-key","time":5},{"note":"g-key","time":6},{"note":"f-key","time":8},{"note":"f-key","time":9},{"note":"e-key","time":10},{"note":"e-key","time":11},{"note":"d-key","time":12},{"note":"d-key","time":13},{"note":"c-key","time":14},{"note":"g-key","time":16},{"note":"g-key","time":17},{"note":"f-key","time":18},{"note":"f-key","time":19},{"note":"e-key","time":20},{"note":"e-key","time":21},{"note":"d-key","time":22},{"note":"g-key","time":24},{"note":"g-key","time":25},{"note":"f-key","time":26},{"note":"f-key","time":27},{"note":"e-key","time":28},{"note":"e-key","time":29},{"note":"d-key","time":30},{"note":"c-key","time":32},{"note":"c-key","time":33},{"note":"g-key","time":34},{"note":"g-key","time":35},{"note":"a-key","time":36},{"note":"a-key","time":37},{"note":"g-key","time":38},{"note":"f-key","time":40},{"note":"f-key","time":41},{"note":"e-key","time":42},{"note":"e-key","time":43},{"note":"d-key","time":44},{"note":"d-key","time":45},{"note":"c-key","time":46}]'
+>Twinkle Little Star</option
+>
+</select>
+
+<p id="info-text" class="text mt-1">Select a lesson and press play to start
+</p>
+<button
+class="btn btn-success mt-1 mx-auto col-7"
+id="start-piano"
+aria-label="Press to start piano"
+>
+Play
+</button></div>
+<div id="stop-landscape">please turn off  auto rotate on your device to continue
+  <br>
+  
+    <img src="Rotate.jpg"></div>
+  <!-- purpose of this div is to stop landsacpe mode--> 
+
+</div>
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="index.js"></script>
+<script src="songs.js"></script>
+</body>
+</html>

@@ -29,12 +29,12 @@
   <div onclick="selectInspiration()" id="inspiration-video"><video poster="ins.jpg"  id="daily-video"><source src="Ill.mp4" type="video/mp4"></video><i onclick="playInsVid()" class="fa-solid fa-play" id="insplay-btn"></i></div>
   
   
-  <div onclick="selectIntro()" id="enaivoc-intro"><video poster="IMG-20240809-WA0007.jpg"  id="intro-video"><source src="Ill.mp4" type="video/mp4"></video><i onclick="playIntroVid()" class="fa-solid fa-play" id="introplay-btn"></i></div>
+  <div onclick="selectIntro()" id="enaivoc-intro"><iframe width="560" height="315" src="https://www.youtube.com/embed/gzXbYXYJrmA?si=EOckQcgx2WiJCbQD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen onended="Endedvideo()" poster="IMG-20240809-WA0007.jpg" id="intro-video"></iframe><i onclick="playIntroVid()" class="fa-solid fa-play" id="introplay-btn"></i></div>
 <h2 id="slogan">begin your journey to change the world</h2>
 <button onclick="lessonMenu()" id="begin">begin</button>
 </div>
-</div>
- <div onclick="selectInspiration()" id="video"><video onended="Endedvideo()" poster="ins.jpg"  id="video-play"><source src="Ill.mp4" type="video/mp4"></video>
+</div><!-- <video onended="Endedvideo()" poster="ins.jpg"  id="video-play"><source src="Ill.mp4" type="video/mp4"></video> -->
+ <div onclick="selectInspiration()" id="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/gzXbYXYJrmA?si=EOckQcgx2WiJCbQD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen onended="Endedvideo()" poster="ins.jpg" id="video-play"></iframe>
  <i onclick="videoPlay()" class="fa-solid fa-play" id="videoplay-btn"></i>
  <i onclick="pause()" class="fa-solid fa-pause" id="video-pause"></i>
  <i onclick="replay()" id="replay-btn"class="fa-solid fa-arrow-rotate-left"></i></div>

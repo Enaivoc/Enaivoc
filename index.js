@@ -20,7 +20,7 @@ function playEnaivocDescriptionVideo(){
   document.getElementById("videoplay-btn").style.display="none"
   document.getElementById("video-pause").style.removeProperty("display")
 }
-setTimeout(playMontlyCartoonVideo,5000);
+
 function playMontlyCartoonVideo(){
   document.getElementById("enaivocDescription-videoDiv").style.display="none"
   document.getElementById("home-btn").style.removeProperty("display")

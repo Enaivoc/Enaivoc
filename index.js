@@ -3,8 +3,6 @@ window.addEventListener('load',function(){
 });
 function firstLoad(){
   document.getElementById("home-btn").style.display="none"
-  document.getElementById("enaivocDescription-videoDiv").style.display="none"
-  document.getElementById("montlyCartoon-videoDiv").style.display="none"
 }
 if(window.location.search.includes('runFunction=true')){
    lessonMenu();

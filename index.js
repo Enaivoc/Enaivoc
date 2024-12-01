@@ -1,4 +1,6 @@
-window.addEventListener('load',firstLoad)
+window.addEventListener('load',function(){
+  setTimeout(firstLoad,7000)
+});
 function firstLoad(){
   document.getElementById("home-btn").style.display="none"
   document.getElementById("enaivocDescription-videoDiv").style.display="none"
@@ -7,7 +9,6 @@ function firstLoad(){
 if(window.location.search.includes('runFunction=true')){
    lessonMenu();
 }
-setTimeout(playEnaivocDescriptionVideo,5000)
 function playEnaivocDescriptionVideo(){
   document.getElementById("montlyCartoon-videoDiv").style.display="none"
   document.getElementById("home-btn").style.removeProperty("display")
@@ -20,7 +21,6 @@ function playEnaivocDescriptionVideo(){
   document.getElementById("videoplay-btn").style.display="none"
   document.getElementById("video-pause").style.removeProperty("display")
 }
-
 function playMontlyCartoonVideo(){
   document.getElementById("enaivocDescription-videoDiv").style.display="none"
   document.getElementById("home-btn").style.removeProperty("display")

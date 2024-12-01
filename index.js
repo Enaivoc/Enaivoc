@@ -7,7 +7,7 @@ function firstLoad(){
 if(window.location.search.includes('runFunction=true')){
    lessonMenu();
 }
-setTimeout(playEnaivocDescriptionVideo,5000);
+setTimeout(playEnaivocDescriptionVideo,5000)
 function playEnaivocDescriptionVideo(){
   document.getElementById("montlyCartoon-videoDiv").style.display="none"
   document.getElementById("home-btn").style.removeProperty("display")

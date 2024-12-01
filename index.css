@@ -253,6 +253,7 @@ h2{
   
     background-size: cover;
     border-radius: 2px;
+    visibility: hidden;
     
 }
 #montlyCartoon-videoDiv{
@@ -279,12 +280,14 @@ width: 100%;
   
     background-size: cover;
     border-radius: 2px;
+    visibility: hidden;
 }
 
 #home-btn{
   color:rgb(20,255,198);
   font-size: 25px;
   margin-top: 10%;
+  visibility: hidden;
   
   
 }

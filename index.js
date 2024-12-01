@@ -8,6 +8,8 @@ if(window.location.search.includes('runFunction=true')){
    lessonMenu();
 }
 function playEnaivocDescriptionVideo(){
+  document.getElementById("enaivocDescription-video").style.visibility="visible"
+  document.getElementById("home-btn").style.visibility="visible"
   document.getElementById("montlyCartoon-videoDiv").style.display="none"
   document.getElementById("home-btn").style.removeProperty("display")
   document.getElementById("montlyCartoonDiv-btn").style.visibility="visible"
@@ -20,6 +22,8 @@ function playEnaivocDescriptionVideo(){
   document.getElementById("video-pause").style.removeProperty("display")
 }
 function playMontlyCartoonVideo(){
+  document.getElementById("montlyCartoon-video").style.visibility="visible"
+  document.getElementById("home-btn").style.visibility="visible"
   document.getElementById("enaivocDescription-videoDiv").style.display="none"
   document.getElementById("home-btn").style.removeProperty("display")
   document.getElementById("enaivocDescriptionDiv-btn").style.visibility="visible"

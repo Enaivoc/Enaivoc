@@ -20,7 +20,13 @@ const keys = [
   "dhigh-key",
   "dsharphigh-key",
   "ehigh-key",
-  "fhigh-key"
+  "fhigh-key",
+  "fsharphigh-key",
+  "ghigh-key",
+  "gsharphigh-key",
+  "ahigh-key",
+  "asharphigh-key",
+  "bhigh-key"
 ];
 
 const notes = [];
@@ -80,40 +86,21 @@ const keyPress = note => {
 notes.forEach(keyPress);
 
 /*Starts the tutorDemo function on press of the 'Go' button. Disables the 'Go' button for 4 seconds to prevent additional presses*/
-let startTutorButton;
-let videoEnded = false;
-let demoEnded = false;
-let videoPaused = false;
 
+let startTutorButton;
 $(document).ready(() => {
+  let selectedSongDescription= localStorage.getItem("selectedSongDescription");
+  let iframeSource = $("#illumineLesson");
+  console.log('iframeSource:',iframeSource);
+  iframeSource.attr("src",selectedSongDescription);
   startTutorButton=$("#startTutor");
   startTutorButton.click(function() {
-    videoEnded = false;
-    demoEnded = false;
-    videoPaused = false;
      startTutorButton.hide();
-    const video=document.getElementById("intro-video")
-     video.addEventListener("ended",function (){
-       videoEnded = true;
-       checkBothEnded();
-     });
-     
      tutorDemo(function(){
-       demoEnded = true;
-       checkBothEnded();
+       startTutorButton.show()
      });
-     playIll();
-     
-     
   });
 });
-
-function checkBothEnded(){
-  startTutorButton.hide();
-       if((videoEnded || videoPaused) && demoEnded){
-         startTutorButton.css('display','block');
-       }
-     }
 function tutorDemo(callback){
   document.documentElement.click();
   const keyObject = {};
@@ -154,68 +141,13 @@ function tutorDemo(callback){
         keyDown(keyObject);
         if(i===lastNote){
             lastNoteFinished = true;
-            checkBothEnded();
+            callback();
         }
       }, correctTiming);
     })(i);
   }
   },100);
-  callback();
-
-
-  function checkDemoEnd(){
-    if(lastNoteFinished&&demoEnded){
-      const video = document.getElementById("intro-video");
-      video.pause();
-      video.currentTime=0;
-      videoPaused = true;
-      checkBothEnded();
-    }
-  }
-  callback();
-  
 }
-
-function playIll(){
-  document.getElementById("intro-video").play()
-}
-
-
-function syncVideoWithDemo(barLength){
-  const video = document.getElementById("intro-video");
-  const demoDuration = barLength*2;
-  video.addEventListener("timeupdate",function(){
-    if (demoEnded&&video.currentTime >= demoDuration){
-      video.pause();
-      video.currentTime=0;
-      videoPaused = true;
-      checkBothEnded();
-    }
-  });
-}
-$("select#bar-select").on("change", function(){
-  const barLength = $(this).val()*1.2;
-  syncVideoWithDemo(barLength)
-});
-
-/*
-tutorDemo
-
-Iterates through the song array, and simulates a user click on each key
-- keyObject asigns the key buttons(html) as an object
-- speed changes the demo play speed
-- barLength changes how much of the song is played in the demo (4 beats per bar)
-- storageVar pulls the song data string from local storage
-- order parses storageVar into an array of objects
-'if' statement breaks the song loop when the barLength is reached
-'setTimeout' example was learnt from 'https://stackoverflow.com/questions/11764714/applying-delay-between-iterations-of-javascript-for-loop', and modified
-First 'setTimeout' sets the delay between notes. This is modified by the 'correctTiming' variable, which uses the 'time' value of the song array
-Second 'setTimeout' simulates time the key is held down (colour highlighting)
-*/
-
-
-
-/*Uses (https://github.com/kayahr/jquery-fullscreen-plugin/) to toggle fullscreen view*/
 
 function toggleFullscreen() {
   $(document).toggleFullScreen();
@@ -229,12 +161,7 @@ $("#help-button").click(() => {
 $("#close-modal").click(() => {
   $("#modal").hide();
 });
-$(document).ready(() => {
-  let selectedSongDescription= localStorage.getItem("selectedSongDescription");
-  let videoSource = $("#intro-video")
-  videoSource.attr("src",selectedSongDescription);
-});
-
 $('#start-quiz').click(function(){
   $(this).text('Coming Soon');
 });
+

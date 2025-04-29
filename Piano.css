@@ -14,7 +14,7 @@
   
 }
 body{
-  background: black;
+  background: #010e13;
   color:white;
   margin-left: 0%;
 }
@@ -43,10 +43,10 @@ body{
   position: relative;
 }
 #fullscreen-button{
-  background: rgb(132,150,151);
-  font-family: 'comfortaa',cursive;
+  background: rgb(198,253,255);
+  font-family: "Architects Daughter", sans-serif;
   font-size: 10px;
-  color: black;
+  color: #00161e;
   border: none;
   width: 70px;
   height: 5vh;
@@ -59,11 +59,11 @@ bottom: 2%;
   z-index: 1;
 }
 option{
-  font-family: 'comfortaa',cursive;
+  font-family: "Architects Daughter", sans-serif;
   font-size: 10px;
 }
 #home-btn{
-  color:rgb(132,150,151);
+  color:rgb(198,253,255);
   font-size: 25px;
   margin-top: 0%;
   position: fixed;
@@ -79,7 +79,7 @@ option{
   right: 70px;
   top: 8%;
   font-size: 30px;
-  color: #ddff10;
+  color: rgb(74,255,241);
   z-index: 1;
   
 }
@@ -89,21 +89,21 @@ option{
   width: 70px;
   height: 5vh;
   font-weight: 900;
-  font-family: 'comfortaa',cursive;
+  font-family: "Architects Daughter", sans-serif;
   top: 8%;
   right: 90px;
   font-size: 10px;
-  background:linear-gradient(to right, rgb(245,255,13),rgb(0,230,233)) ;
+  background:linear-gradient(to right, rgb(198,253,255),rgb(198,253,255));
   border: none;
-  color: rgba(255,14,14,0.73);
+  color: #00161e;
   z-index: 1;
   border-radius: 2.5px;
 }
 #speed-select{
-  background: rgb(132,150,151);
-  font-family: 'comfortaa',cursive;
+  background: rgb(198,253,255);
+  font-family: "Architects Daughter", sans-serif;
   font-size: 10px;
-  color: black;
+  color: #00161e;
   border: none;
   width: 70px;
   height: 5vh;
@@ -116,10 +116,10 @@ option{
   right: -35px;
 }
 #bar-select{
-  background: rgb(132,150,151);
-  font-family: 'comfortaa',cursive;
+  background: rgb(198,253,255);
+  font-family: "Architects Daughter", sans-serif;
   font-size: 10px;
-  color: black;
+  color: #00161e;
   border: none;
   width: 70px;
   height: 5vh;
@@ -263,7 +263,7 @@ transform: rotate(257.11deg);
   width: 10px;
   
   margin: 20px;
-  font-family: "Gluten", cursive;
+  font-family: "Architects Daughter", sans-serif;
   
 }
 .illustration-vid{
@@ -306,13 +306,13 @@ top: 50%;
   font-size: 30px;
   top: 65px;
   left: 128px;
-  font-family: 'gluten',cursive;
+  font-family: "Architects Daughter", sans-serif;
 }
 select{
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  font-family: 'gluten',cursive !importantimportant;
+  font-family: "Architects Daughter", sans-serif; !importantimportant;
 }
 option{
   -webkit-appearance: none;
@@ -339,9 +339,9 @@ option{
   visibility: visible;
   height: 800px;
   max-height: 1000px;
-  font-family: 'gluten',cursive;
-  color: red;
-  background:linear-gradient(to right, rgb(245,255,13),rgb(0,230,233)) ;
+  font-family: "Architects Daughter", sans-serif;
+  color: rgb(74,255,241);
+  background:linear-gradient(to right, #00161e,#00161e) ;
   font-size: 25px;
   justify-content: center;
   text-align: center;
@@ -375,11 +375,20 @@ img{
   display: flex;
   position: fixed;
   opacity: 1;
-  background: url("ins2.jpg");
+  background: url("ghilbi1.png");
   border-radius: 5px;
   padding: 0;
   background-size: cover;
   overflow: hidden;
+  min-width: 400px; 
+    width: 400px; 
+    height: 200px; 
+    border: none;
+  
+    background-size: cover;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #003232;
 }
 #illumineLesson{
   

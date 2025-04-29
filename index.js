@@ -2,16 +2,18 @@ window.addEventListener('load',function(){
   setTimeout(firstLoad,7000)
 });
 function firstLoad(){
-  document.getElementById("home-btn").style.display="none"
+  document.getElementById("home-btn").style.display="block"
 }
 if(window.location.search.includes('runFunction=true')){
    lessonMenu();
 }
 function playEnaivocDescriptionVideo(){
   document.getElementById("enaivocDescription-video").style.visibility="visible"
-  document.getElementById("home-btn").style.visibility="visible"
   document.getElementById("montlyCartoon-videoDiv").style.display="none"
-  document.getElementById("home-btn").style.removeProperty("display")
+  setTimeout(()=>{
+    document.getElementById("home-btn").style.removeProperty("display");
+  },1000)
+  
   document.getElementById("montlyCartoonDiv-btn").style.visibility="visible"
   document.getElementById("montlyCartoonDiv-btn").style.removeProperty("display")
   let Video=document.getElementById("intro-video")
@@ -23,9 +25,10 @@ function playEnaivocDescriptionVideo(){
 }
 function playMontlyCartoonVideo(){
   document.getElementById("montlyCartoon-video").style.visibility="visible"
-  document.getElementById("home-btn").style.visibility="visible"
   document.getElementById("enaivocDescription-videoDiv").style.display="none"
-  document.getElementById("home-btn").style.removeProperty("display")
+  setTimeout(()=>{
+    document.getElementById("home-btn").style.removeProperty("display");
+  },1000)
   document.getElementById("enaivocDescriptionDiv-btn").style.visibility="visible"
   document.getElementById("enaivocDescriptionDiv-btn").style.removeProperty("display")
   document.getElementById("home").style.display="none"
@@ -41,6 +44,7 @@ function ClickEnaivocDescriptionDiv(){
   document.getElementById("enaivocDescriptionDiv").style.height="170px"
   document.getElementById("enaivocDescriptionDiv").style.opacity = "1.0";
   document.getElementById("montlyCartoonDiv-btn").style.visibility="visible"
+  document.getElementById("home-btn").style.display="none"
   
 }
 function ClickMontlyCartoonDiv(){
@@ -54,7 +58,7 @@ function ClickMontlyCartoonDiv(){
 }
 function Home(){
   document.getElementById("home").style.removeProperty("display")
-  document.getElementById("body").style.backgroundColor="white"
+  document.getElementById("body").style.backgroundColor="#010e13"
   document.getElementById("montlyCartoonDiv-btn").style.removeProperty("display")
   document.getElementById("enaivocDescriptionDiv-btn").style.removeProperty("display")
   document.getElementById("home-btn").style.display="none"

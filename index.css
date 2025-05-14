@@ -22,7 +22,7 @@
   margin-left: 0;
   font-size: 13px;
   font-weight: 200;
-  font-family: "Architects Daughter", sans-serif;
+  font-family: "sour gummy", sans-serif;
   visibility: hidden;
   width: 70%;
   height: 25vh;
@@ -40,7 +40,7 @@
   margin-right: 0;
   margin-left: 0;
    font-size: 13px;
-  font-family: "Architects Daughter", sans-serif;
+  font-family: "sour gummy", sans-serif;
   text-transform: capitalize;
   font-weight: 500;
   color: rgb(255,243,6);
@@ -48,10 +48,10 @@
 }
 select{
   appearance: none;
-  font-family: "Architects Daughter", sans-serif !important;
+  font-family: "sour gummy", sans-serif; !important;
 }
 option{
-  font-family: "Architects Daughter", sans-serif !important;
+  font-family: "sour gummy", sans-serif; !important;
 }
 
 *{
@@ -69,15 +69,15 @@ body{
 }
 #info-text{
   font-size: 13px;
-  font-family: "Architects Daughter", sans-serif;
+  font-family: "sour gummy", sans-serif;
   text-transform: capitalize;
   font-weight: 500;
-  color: rgb(198,253,255);
+  color: rgb(74,255,241);
   margin-top: 4%;
 }
 #start-piano{
 margin-top: 15%;
-  background:linear-gradient(to right, rgb(198,253,255),rgb(198,253,255)) ;
+  background:linear-gradient(to right, rgb(74,255,241),rgb(198,253,255)) ;
   border: none;
   border: 1px solid rgb(0,21,22);
   border-radius: 5px;
@@ -87,7 +87,7 @@ margin-top: 15%;
   font-weight: 700;
   font-size: 18px;
   min-height: 40px;
-  font-family: "Rancho", sans-serif;
+  font-family: "sour gummy", sans-serif;
 }
 #fixed-header{
   z-index: 1;
@@ -115,14 +115,15 @@ margin-top: 15%;
   border-radius: 2%;border-bottom: 1.5px solid rgb(0,20,21);
   border-left: .005px groove rgb(0,25,23);
   text-transform: lowercase;
-  font-family: "Climate Crisis", sans-serif;
-    font-size: 20px;
+  font-family: "flavors", cursive;
+    font-size: 30px;
     font-weight: 100;
-    color: rgb(74,255,241);
+    color: white;
     margin-left: auto;
     margin-right: auto;
     margin-top: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 4%;
+/**text-shadow:  -1px 0px 2px #ffffffb1;**/
 }
 .header-shadow-space{
   margin-bottom: 17%;
@@ -130,12 +131,11 @@ margin-top: 15%;
 }
 #enaivocDescriptionDiv{
   position: relative;
-  background: url("Ghilbi3.png");
-  width: 90%;
+  background: url("Ghilbi1.png");
   margin-left: auto;
   margin-right: auto;
-  border-radius: 5%;
-  border: 1px solid #cccccc;
+  border-radius: 2%;
+  border: none;
   transition-delay: 2s;
   transition: height 2s, width 2s, opacity 2s;
   transition-timing-function: ease-in-out;
@@ -145,23 +145,12 @@ margin-top: 15%;
     bottom: 0;
     min-width: 30%; 
     min-height: 10%;
-    width: 90%; 
+    width: 95%; 
     height: 170px; 
   
     background-size: cover;
     border-radius: 9px;
   
-}
-#weeklypoemtext{
-  position: bottom;
-  font-size: 10px;
-  font-family: "Architects Daughter", sans-serif;
-  text-transform: capitalize;
-  font-weight: 500;
-  color: rgb(198,253,255);
-  position: absolute;
-  bottom: 2%;
-  transform: translate(-50%,-50%);
 }
 #daily-video{
   position: center; 
@@ -181,8 +170,9 @@ margin-top: 15%;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  font-size: 30px;
-  color: rgb(198,253,255);
+  font-size: 23px;
+  color: white;
+ /** text-shadow:  -2px 0px 4px #b0eaffe8,2px 0px 4px #b0eaffe8;**/
   transition: linear .2s;
   visibility: visible;
   z-index: 1;
@@ -195,9 +185,9 @@ margin-top: 15%;
   background: url("Ghilbi4.png");
   margin-left: auto;
   margin-right: auto;
-  border-radius: 5%;
+  border-radius: 2%;
   margin-top: 10%;
-  border: 1px solid #cccccc;
+  border: none;
   transition-delay: 2s;
   transition:height 2s, width 2s, opacity 2s;
   transition-timing-function: ease-in-out;
@@ -205,7 +195,7 @@ margin-top: 15%;
     bottom: 0;
     min-width: 30%; 
     min-height: 10%;
-    width: 55%; 
+    width: 60%; 
     height: 110px;
     background-size: cover;
     border-radius: 9px;
@@ -230,42 +220,44 @@ margin-top: 15%;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  font-size: 30px;
-  color: rgb(198,253,255);
+  font-size: 23px;
+  color: white;
+/**  text-shadow:  -2px 0px 4px #b0eaffe8,2px 0px 4px #b0eaffe8;**/
   visibility: visible;
 }
 h2{
   font-size: 10px;
-  font-family: "Architects Daughter", sans-serif;
+  font-family: "sour gummy", sans-serif;
   text-transform: capitalize;
-  font-weight: 500;
+  font-weight: 100;
   margin-top: 15%;
   margin-left: 5%;
   margin-right: 5%;
-  color: white;
+  color: #a8fff8;
 }
 #span1{
   color: rgb(74,255,241);
 }
 #span3{
-  color: rgb(255,243,6);
+  color: rgb(74,255,241);
 }
 #span2{
-  color: rgb(255,6,83);
+  color: rgb(74,255,241);
 }
 #begin{
   margin-top: 15%;
-  background:linear-gradient(to right, rgb(198,253,255),rgb(198,253,255)) ;
+  background:linear-gradient(to right, white,white) ;
   border: none;
-  border: 1px solid rgb(0,21,22);
+  border: none;
+  box-shadow: -2px 0px 4px white,2px 0px 4px white;
   border-radius: 5px;
   width: 40%;
   height: auto;
   color: #00161e;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 14px;
   min-height: 40px;
-  font-family: "Rancho", sans-serif;
+  font-family: "sour gummy", sans-serif;
 }
 #enaivocDescription-videoDiv{
   width: 100%;
@@ -340,7 +332,7 @@ width: 100%;
   left: 0px;
   top: 0px;
   height: 1300px;
-  font-family: 'Architects Daughter',Sans-Serif;
+  font-family: "sour gummy", sans-serif;
   color: rgb(198,253,255);
   background:linear-gradient(to right,#00161e #00161e)) ;
   font-size: 19px;

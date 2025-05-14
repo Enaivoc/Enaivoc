@@ -38,9 +38,9 @@ function playMontlyCartoonVideo(){
 function ClickEnaivocDescriptionDiv(){
   document.getElementById("enaivocDescriptionDiv-btn").style.visibility="visible"
   document.getElementById("montlyCartoonDiv").style.opacity = "0.3";
-  document.getElementById("montlyCartoonDiv").style.width="55%"
+  document.getElementById("montlyCartoonDiv").style.width="60%"
   document.getElementById("montlyCartoonDiv").style.height="110px"
-  document.getElementById("enaivocDescriptionDiv").style.width="90%"
+  document.getElementById("enaivocDescriptionDiv").style.width="95%"
   document.getElementById("enaivocDescriptionDiv").style.height="170px"
   document.getElementById("enaivocDescriptionDiv").style.opacity = "1.0";
   document.getElementById("montlyCartoonDiv-btn").style.visibility="visible"
@@ -50,9 +50,9 @@ function ClickEnaivocDescriptionDiv(){
 function ClickMontlyCartoonDiv(){
   document.getElementById("montlyCartoonDiv-btn").style.visibility="visible"
   document.getElementById("montlyCartoonDiv").style.opacity = "1.0";
-  document.getElementById("montlyCartoonDiv").style.width="90%"
+  document.getElementById("montlyCartoonDiv").style.width="95%"
   document.getElementById("montlyCartoonDiv").style.height="170px"
-  document.getElementById("enaivocDescriptionDiv").style.width="55%"
+  document.getElementById("enaivocDescriptionDiv").style.width="60%"
   document.getElementById("enaivocDescriptionDiv").style.height="110px"
   document.getElementById("enaivocDescriptionDiv").style.opacity = "0.3";
 }

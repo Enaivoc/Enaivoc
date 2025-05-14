@@ -113,8 +113,8 @@ margin-top: 15%;
   background-position: center;
   border-radius: 2%;border-bottom: 1.5px solid black;
   border-left: .005px groove black;
-  text-transform: lowercase;
-  font-family: "fredericka the great", Sans-Serif;
+  text-transform: uppercase;
+  font-family: "cabin sketch", Sans-Serif;
     font-size: 30px;
     font-weight: 100;
     color: white;
@@ -123,6 +123,11 @@ margin-top: 15%;
     margin-top: 5%;
     padding-bottom: 4%;
 text-shadow:  -2px 0px 4px #ffffff;
+}
+#app-name span{
+  text-transform: lowercase;
+  font-family: "fredericka the great", Sans-Serif;
+  
 }
 .header-shadow-space{
   margin-bottom: 17%;

@@ -1,5 +1,12 @@
 window.addEventListener('load',function(){
   setTimeout(firstLoad,7000)
+ document.getElementById("home").style.removeProperty("display")
+  document.getElementById("body").style.backgroundColor="black"
+  document.getElementById("montlyCartoonDiv-btn").style.removeProperty("display")
+  document.getElementById("enaivocDescriptionDiv-btn").style.removeProperty("display")
+  document.getElementById("home-btn").style.display="none";
+  document.getElementById("enaivocDescription-videoDiv").style.display="none"
+  document.getElementById("montlyCartoon-videoDiv").style.display="none"
 });
 function firstLoad(){
   document.getElementById("home-btn").style.display="block"
@@ -11,7 +18,7 @@ function playEnaivocDescriptionVideo(){
   document.getElementById("enaivocDescription-video").style.visibility="visible"
   document.getElementById("montlyCartoon-videoDiv").style.display="none"
   setTimeout(()=>{
-    document.getElementById("home-btn").style.removeProperty("display");
+    document.getElementById("home-btn").style.display="block";
   },1000)
   
   document.getElementById("montlyCartoonDiv-btn").style.visibility="visible"
@@ -27,7 +34,7 @@ function playMontlyCartoonVideo(){
   document.getElementById("montlyCartoon-video").style.visibility="visible"
   document.getElementById("enaivocDescription-videoDiv").style.display="none"
   setTimeout(()=>{
-    document.getElementById("home-btn").style.removeProperty("display");
+    document.getElementById("home-btn").style.display="block";
   },1000)
   document.getElementById("enaivocDescriptionDiv-btn").style.visibility="visible"
   document.getElementById("enaivocDescriptionDiv-btn").style.removeProperty("display")
@@ -58,7 +65,7 @@ function ClickMontlyCartoonDiv(){
 }
 function Home(){
   document.getElementById("home").style.removeProperty("display")
-  document.getElementById("body").style.backgroundColor="#010e13"
+  document.getElementById("body").style.backgroundColor="black"
   document.getElementById("montlyCartoonDiv-btn").style.removeProperty("display")
   document.getElementById("enaivocDescriptionDiv-btn").style.removeProperty("display")
   document.getElementById("home-btn").style.display="none"

@@ -14,7 +14,7 @@
   
 }
 body{
-  background: #010e13;
+  background: black;
   color:white;
   margin-left: 0%;
 }
@@ -31,7 +31,7 @@ body{
 }
 .keyboard{
   opacity: 1;
-  background: linear-gradient( to right,rgb(0,169,170),rgb(89,111,112));
+  background: black;
   color: white;
   padding-right: 0;
   display: block;
@@ -43,10 +43,10 @@ body{
   position: relative;
 }
 #fullscreen-button{
-  background: rgb(198,253,255);
-  font-family: "Architects Daughter", sans-serif;
+  background: white;
+  font-family: "sour gummy", sans-serif;
   font-size: 10px;
-  color: #00161e;
+  color: black;
   border: none;
   width: 70px;
   height: 5vh;
@@ -59,11 +59,11 @@ bottom: 2%;
   z-index: 1;
 }
 option{
-  font-family: "Architects Daughter", sans-serif;
+  font-family: "sour gummy", sans-serif;
   font-size: 10px;
 }
 #home-btn{
-  color:rgb(198,253,255);
+  color:white;
   font-size: 25px;
   margin-top: 0%;
   position: fixed;
@@ -79,7 +79,7 @@ option{
   right: 70px;
   top: 8%;
   font-size: 30px;
-  color: rgb(74,255,241);
+  color: white;
   z-index: 1;
   
 }
@@ -89,21 +89,21 @@ option{
   width: 70px;
   height: 5vh;
   font-weight: 900;
-  font-family: "Architects Daughter", sans-serif;
+  font-family: "sour gummy", sans-serif;
   top: 8%;
   right: 90px;
   font-size: 10px;
-  background:linear-gradient(to right, rgb(198,253,255),rgb(198,253,255));
+  background:white;
   border: none;
-  color: #00161e;
+  color: black;
   z-index: 1;
   border-radius: 2.5px;
 }
 #speed-select{
-  background: rgb(198,253,255);
-  font-family: "Architects Daughter", sans-serif;
+  background: white;
+  font-family: "sour gummy", sans-serif;
   font-size: 10px;
-  color: #00161e;
+  color: black;
   border: none;
   width: 70px;
   height: 5vh;
@@ -116,10 +116,10 @@ option{
   right: -35px;
 }
 #bar-select{
-  background: rgb(198,253,255);
-  font-family: "Architects Daughter", sans-serif;
+  background: white;
+  font-family: "sour gummy", sans-serif;
   font-size: 10px;
-  color: #00161e;
+  color: black;
   border: none;
   width: 70px;
   height: 5vh;
@@ -142,7 +142,7 @@ option{
   padding-top: 0px;
   border-radius: 2%;
   width: 48%;
-  border: 1px outset rgb(89,111,112);
+  font-family: "sour gummy", sans-serif;
   margin-right: 0;
 
   overflow: scroll;
@@ -263,7 +263,7 @@ transform: rotate(257.11deg);
   width: 10px;
   
   margin: 20px;
-  font-family: "Architects Daughter", sans-serif;
+  font-family: "sour gummy", sans-serif;
   
 }
 .illustration-vid{
@@ -306,7 +306,7 @@ top: 50%;
   font-size: 30px;
   top: 65px;
   left: 128px;
-  font-family: "Architects Daughter", sans-serif;
+  font-family: "sour gummy", sans-serif;
 }
 select{
   -webkit-appearance: none;

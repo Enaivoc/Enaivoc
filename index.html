@@ -5,26 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
   <script src="index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Architects+Daughter&family=Gluten:wght@100..900&family=Itim&family=Kablammo&family=Madimi+One&family=Rancho&family=Sixtyfour&family=Tilt+Prism&display=swap&family=Climate+Crisis&family=Nova+Cut" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
 <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shizuru&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Flavors&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Fredericka+the+Great&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/19589ebed2.js" crossorigin="anonymous"></script>
   <title>illumined</title>
@@ -40,10 +24,10 @@
 </div>
 <div id="home-page">
   <div class="header-shadow-space">°°°</div>
-  <div onclick="ClickEnaivocDescriptionDiv()" id="enaivocDescriptionDiv"><i onclick="setTimeout(playEnaivocDescriptionVideo,1000)" class="fa-solid fa-play" id="enaivocDescriptionDiv-btn"></i></div>
+  <div onclick="ClickEnaivocDescriptionDiv()" id="enaivocDescriptionDiv"><i onclick="setTimeout(playEnaivocDescriptionVideo,4000); setTimeout(transition,1000)" class="fa-solid fa-play" id="enaivocDescriptionDiv-btn"></i></div>
   
   
-  <div onclick="ClickMontlyCartoonDiv()" id="montlyCartoonDiv"><i onclick="setTimeout(playMontlyCartoonVideo,1000)" class="fa-solid fa-play" id="montlyCartoonDiv-btn"></i></div>
+  <div onclick="ClickMontlyCartoonDiv()" id="montlyCartoonDiv"><i onclick="setTimeout(playMontlyCartoonVideo,4000); setTimeout(transition,1000)" class="fa-solid fa-play" id="montlyCartoonDiv-btn"></i></div>
 <h2 id="slogan"><span id="span1">Empower your mind,</span> <span id="span2">unlock your potential,</span><br><span id="span3">Shape tommorow.</span><br><br>
 </h2>
 <button onclick="lessonMenu()" id="begin">explore</button>
@@ -91,10 +75,8 @@ aria-label="Press to start piano"
 >
 Learn
 </button></div>
-<div id="stop-landscape">please turn off  auto rotate on your device to continue
+<div id="stop-landscape">App Strictly designed for portrait device resolution<br>turn off rotate on device settings to continue
 <br>
-App Strictly designed for portrait device resolution
-  <br>
   
     <img src="Rotate.jpg"></div>
   <!-- purpose of this div is to stop landsacpe mode--> 

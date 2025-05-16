@@ -17,6 +17,11 @@ body{
   background: black;
   color:white;
   margin-left: 0%;
+  opacity: 0;
+  transition: opacity 5s;
+}
+.loaded {
+  opacity: 1;
 }
 .white-key{
  touch-action: none;
@@ -339,8 +344,8 @@ option{
   visibility: visible;
   height: 800px;
   max-height: 1000px;
-  font-family: "Architects Daughter", sans-serif;
-  color: rgb(74,255,241);
+  font-family: "sour gummy", sans-serif;
+  color: white;
   background:linear-gradient(to right, #00161e,#00161e) ;
   font-size: 25px;
   justify-content: center;

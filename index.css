@@ -3,6 +3,14 @@
   left: -9999px;
   top: -9999px;
 }
+#home{
+  transition: opacity 3s;
+}
+
+.hidden {
+  opacity: 0;
+}
+
 #opt{
   color:rgb(255,28,76);
 }
@@ -65,8 +73,13 @@ body{
   text-align: center;
   justify-content: center;
   align-items: center;
-  
+  opacity: 0;
+  transition: opacity 5s;
 }
+.loaded {
+  opacity: 1;
+}
+
 #info-text{
   font-size: 13px;
   font-family: "sour gummy", sans-serif;
@@ -176,7 +189,7 @@ text-shadow:  -2px 0px 4px #ffffff;
   transform: translate(-50%,-50%);
   font-size: 23px;
   color: white;
- /** text-shadow:  -2px 0px 4px #b0eaffe8,2px 0px 4px #b0eaffe8;**/
+ text-shadow:  -2px 0px 4px white,2px 0px 4px white;
   transition: linear .2s;
   visibility: visible;
   z-index: 1;
@@ -203,7 +216,7 @@ text-shadow:  -2px 0px 4px #ffffff;
     height: 110px;
     background-size: cover;
     border-radius: 9px;
-    opacity: 0.3;
+    opacity: 1;
   
 }
 #intro-video{
@@ -226,7 +239,7 @@ text-shadow:  -2px 0px 4px #ffffff;
   transform: translate(-50%,-50%);
   font-size: 23px;
   color: white;
-/**  text-shadow:  -2px 0px 4px #b0eaffe8,2px 0px 4px #b0eaffe8;**/
+text-shadow:  -2px 0px 4px white,2px 0px 4px white;
   visibility: visible;
 }
 h2{
@@ -313,6 +326,7 @@ width: 100%;
   font-size: 25px;
   margin-top: 10%;
   display: none;
+  text-shadow:  -2px 0px 4px white,2px 0px 4px white;
 }
 #replay-btn{
   color: white;

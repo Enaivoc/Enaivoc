@@ -1,3 +1,6 @@
+document.addEventListener('DOMContentLoaded', function() {
+  document.body.classList.add('loaded');
+});
 /* Pushes the key id's into the notes array, making all piano key divs available to notes array */
 const style=document.createElement('style');
 style.innerHTML='#lesson-menu{visibility: visible;}';

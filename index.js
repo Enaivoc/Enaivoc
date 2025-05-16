@@ -8,11 +8,21 @@ window.addEventListener('load',function(){
   document.getElementById("enaivocDescription-videoDiv").style.display="none"
   document.getElementById("montlyCartoon-videoDiv").style.display="none"
 });
+document.addEventListener('DOMContentLoaded', function() {
+  document.body.classList.add('loaded');
+});
 function firstLoad(){
-  document.getElementById("home-btn").style.display="block"
+  document.getElementById("home-btn").style.display="none"
 }
 if(window.location.search.includes('runFunction=true')){
    lessonMenu();
+}
+ function transition() {
+  const div = document.getElementById('home');
+  div.classList.add('hidden');
+  setTimeout(function transition() {
+    div.style.display = 'none';
+  }, 3000); // 2000ms = 2s
 }
 function playEnaivocDescriptionVideo(){
   document.getElementById("enaivocDescription-video").style.visibility="visible"
@@ -44,7 +54,7 @@ function playMontlyCartoonVideo(){
 }
 function ClickEnaivocDescriptionDiv(){
   document.getElementById("enaivocDescriptionDiv-btn").style.visibility="visible"
-  document.getElementById("montlyCartoonDiv").style.opacity = "0.3";
+  document.getElementById("montlyCartoonDiv").style.opacity = "1";
   document.getElementById("montlyCartoonDiv").style.width="60%"
   document.getElementById("montlyCartoonDiv").style.height="110px"
   document.getElementById("enaivocDescriptionDiv").style.width="95%"
@@ -61,10 +71,14 @@ function ClickMontlyCartoonDiv(){
   document.getElementById("montlyCartoonDiv").style.height="170px"
   document.getElementById("enaivocDescriptionDiv").style.width="60%"
   document.getElementById("enaivocDescriptionDiv").style.height="110px"
-  document.getElementById("enaivocDescriptionDiv").style.opacity = "0.3";
+  document.getElementById("enaivocDescriptionDiv").style.opacity = "1";
 }
 function Home(){
-  document.getElementById("home").style.removeProperty("display")
+  const div = document.getElementById('home');
+  div.style.display = 'block'; // or the original display value
+  setTimeout(function() {
+    div.classList.remove('hidden');
+  }, 10); // small delay to ensure display is set before transitioning
   document.getElementById("body").style.backgroundColor="black"
   document.getElementById("montlyCartoonDiv-btn").style.removeProperty("display")
   document.getElementById("enaivocDescriptionDiv-btn").style.removeProperty("display")

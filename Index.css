@@ -5,6 +5,8 @@
 }
 #home{
   transition: opacity 3s;
+  transition-timing-function: step-start);
+
 }
 
 .hidden {
@@ -75,6 +77,8 @@ body{
   align-items: center;
   opacity: 0;
   transition: opacity 5s;
+  transition-timing-function: step-start);
+
 }
 .loaded {
   opacity: 1;
@@ -126,24 +130,24 @@ margin-top: 15%;
   background-position: center;
   border-radius: 2%;border-bottom: 1.5px solid black;
   border-left: .005px groove black;
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-family: "cabin sketch", Sans-Serif;
     font-size: 30px;
     font-weight: 100;
     color: white;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5%;
+    margin-top: 7%;
     padding-bottom: 4%;
-text-shadow:  -2px 0px 4px #ffffff;
+text-shadow:  -2px 0px 4px #ffffff,2px 0px 4px white;
 }
-#app-name span{
+/**#app-name span{
   text-transform: lowercase;
   font-family: "fredericka the great", Sans-Serif;
   
-}
+}**/
 .header-shadow-space{
-  margin-bottom: 17%;
+  margin-bottom: 20%;
   visibility: hidden;
 }
 #enaivocDescriptionDiv{
@@ -155,15 +159,17 @@ text-shadow:  -2px 0px 4px #ffffff;
   border: none;
   transition-delay: 2s;
   transition: height 2s, width 2s, opacity 2s;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: step-start);
+
+
   position: center; 
     margin-left: auto;
     margin-right: auto;
     bottom: 0;
     min-width: 30%; 
     min-height: 10%;
-    width: 95%; 
-    height: 170px; 
+    width: 80%; 
+    height: 145.0px; 
   
     background-size: cover;
     border-radius: 9px;
@@ -189,8 +195,10 @@ text-shadow:  -2px 0px 4px #ffffff;
   transform: translate(-50%,-50%);
   font-size: 23px;
   color: white;
- text-shadow:  -2px 0px 4px white,2px 0px 4px white;
-  transition: linear .2s;
+ text-shadow:  -2px 0px 4px #ffffff2b,2px 0px 4px;
+  transition: .2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   visibility: visible;
   z-index: 1;
 
@@ -207,13 +215,14 @@ text-shadow:  -2px 0px 4px #ffffff;
   border: none;
   transition-delay: 2s;
   transition:height 2s, width 2s, opacity 2s;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: step-start);
+
   position: center; 
     bottom: 0;
     min-width: 30%; 
     min-height: 10%;
-    width: 60%; 
-    height: 110px;
+    width: 80%; 
+    height: 145.0px;
     background-size: cover;
     border-radius: 9px;
     opacity: 1;
@@ -239,7 +248,7 @@ text-shadow:  -2px 0px 4px #ffffff;
   transform: translate(-50%,-50%);
   font-size: 23px;
   color: white;
-text-shadow:  -2px 0px 4px white,2px 0px 4px white;
+text-shadow:  -2px 0px 4px #ffffff2b,2px 0px 4px;
   visibility: visible;
 }
 h2{
@@ -326,7 +335,7 @@ width: 100%;
   font-size: 25px;
   margin-top: 10%;
   display: none;
-  text-shadow:  -2px 0px 4px white,2px 0px 4px white;
+  text-shadow:  -2px 0px 4px white;
 }
 #replay-btn{
   color: white;

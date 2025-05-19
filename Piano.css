@@ -214,51 +214,71 @@ option{
   width: 50px;
   margin-left: -9px;
   margin-top: 27px;
+  text-shadow:  2px 0px 4px #1dff07,2px 0px 4px white;
+  font-weight: 100;
 }
 #re-solfa-text{
   color: red;
   font-size: 20px;
+  font-size: 20px;
   user-select: none;
   width: 50px;
+  font-weight: 100;
   margin-left: -9px;
   margin-top: 27px;
+  text-shadow:  2px 0px 4px red,2px 0px 4px white;
   transform: rotate(51.428deg);
 }
 #me-solfa-text{
+  font-size: 20px;
   color: #07e2ff;
   user-select: none;
   width: 50px;
   margin-left: -9px;
   margin-top: 27px;
+  font-weight: 100;
+  text-shadow:  2px 0px 4px #07e2ff,2px 0px 4px white;
   transform: rotate(102.85deg);
 }
 #fa-solfa-text{
   color: #dede00;
   user-select: none;
   width: 50px;
+  font-size: 20px;
   margin-left: -9px;
+  font-weight: 100;
   margin-top: 27px;
+  text-shadow:  2px 0px 4px #dede00,2px 0px 4px white;
   transform: rotate(154.27deg);
 }
 #so-solfa-text{
   color: #ff0754;
   user-select: none;
   width: 50px;
+  font-weight: 100;
+  font-size: 20px;
+  text-shadow:  2px 0px 4px #ff0754,2px 0px 4px white;
   margin-left: -9px;
   margin-top: 27px;
   transform: rotate(205.69deg);
 }
 #la-solfa-text{
   color: #ff8107;
+  text-shadow:  2px 0px 4px #ff8107,2px 0px 4px white;
   user-select: none;
   width: 50px;
+  font-size: 20px;
+  font-weight: 100;
   margin-left: -9px;
   margin-top: 27px;
 transform: rotate(257.11deg);
 }
 #ti-solfa-text{
   color: blue;
+  font-size: 20px;
+  text-shadow:  2px 0px 4px blue,2px 0px 4px white;
   user-select: none;
+  font-weight: 100;
   width: 50px;
   margin-left: -9px;
   margin-top: 27px;
